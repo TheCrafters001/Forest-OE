@@ -111,12 +111,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ForestOSUtilities\ForestOSUtilities.vbproj">
-      <Project>{0ebab124-be39-4f3d-a306-a7d14d677322}</Project>
-      <Name>ForestOSUtilities</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Forest-OS_Logo.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +130,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Poweroff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ForestOSUtilities\ForestOSUtilities.vbproj">
+      <Project>{199809dd-80fa-4dff-8c67-c106b06d6ec2}</Project>
+      <Name>ForestOSUtilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

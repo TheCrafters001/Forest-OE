@@ -1,5 +1,6 @@
 Imports System
 Imports System.Security
+Imports ForestOSUtilities
 Imports System.Security.Cryptography
 Imports System.Text
 ' Security Imports above.
@@ -76,6 +77,7 @@ Public Class Login
     End Sub
 
     Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles Cancel.Click
+        ExplorerStatusChanger.StartExplorer()
         End
     End Sub
 

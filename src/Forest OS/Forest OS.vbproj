@@ -56,6 +56,9 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>Forest-OS.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AutoUpdater.NET, Version=1.6.0.0, Culture=neutral, PublicKeyToken=501435c91b35f4bc, processorArchitecture=MSIL">
       <HintPath>..\packages\Autoupdater.NET.Official.1.6.0\lib\net40\AutoUpdater.NET.dll</HintPath>
@@ -120,6 +123,18 @@
     <Compile Include="OS\Register\CreateAccount.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="OS\Settings\About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Settings\About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OS\Settings\Settings.Designer.vb">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Settings\Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="OS\System\Background.Designer.vb">
       <DependentUpon>Background.vb</DependentUpon>
     </Compile>
@@ -155,6 +170,12 @@
     <EmbeddedResource Include="OS\Register\CreateAccount.resx">
       <DependentUpon>CreateAccount.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OS\Settings\About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Settings\Settings.resx">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\System\Background.resx">
       <DependentUpon>Background.vb</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +188,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Forest-OS.snk" />
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -197,14 +219,13 @@
       <Name>Forest-OS-Console</Name>
     </ProjectReference>
     <ProjectReference Include="..\ForestOSUtilities\ForestOSUtilities.vbproj">
-      <Project>{0ebab124-be39-4f3d-a306-a7d14d677322}</Project>
+      <Project>{199809dd-80fa-4dff-8c67-c106b06d6ec2}</Project>
       <Name>ForestOSUtilities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="OS\Desktop\" />
     <Folder Include="OS\Programs\" />
-    <Folder Include="OS\Settings\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logout.png" />

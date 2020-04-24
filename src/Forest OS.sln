@@ -7,7 +7,7 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Forest OS", "Forest OS\Fore
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Forest-OS-Console", "Forest-OS-Console\Forest-OS-Console.vbproj", "{B4FBE369-16D4-496F-88FB-E0817E134BC4}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ForestOSUtilities", "ForestOSUtilities\ForestOSUtilities.vbproj", "{0EBAB124-BE39-4F3D-A306-A7D14D677322}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ForestOSUtilities", "ForestOSUtilities\ForestOSUtilities.vbproj", "{199809DD-80FA-4DFF-8C67-C106B06D6EC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{B4FBE369-16D4-496F-88FB-E0817E134BC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4FBE369-16D4-496F-88FB-E0817E134BC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4FBE369-16D4-496F-88FB-E0817E134BC4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0EBAB124-BE39-4F3D-A306-A7D14D677322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0EBAB124-BE39-4F3D-A306-A7D14D677322}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0EBAB124-BE39-4F3D-A306-A7D14D677322}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0EBAB124-BE39-4F3D-A306-A7D14D677322}.Release|Any CPU.Build.0 = Release|Any CPU
+		{199809DD-80FA-4DFF-8C67-C106B06D6EC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{199809DD-80FA-4DFF-8C67-C106B06D6EC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{199809DD-80FA-4DFF-8C67-C106B06D6EC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{199809DD-80FA-4DFF-8C67-C106B06D6EC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
