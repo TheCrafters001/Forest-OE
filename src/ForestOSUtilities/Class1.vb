@@ -2,19 +2,19 @@ Imports System.IO
 Imports System.IO.File
 
 Public Class Class1
-    Public Shared Sub HashPassword(ByVal Password As String, ByVal UserName As String)
+    Public Shared Sub CreateUser(ByVal Password As String, ByVal UserName As String)
         Try
             Dim path As String
             path = "C:\Forest-OS\User\"
-            If Directory.Exists(Path) Then
+            If Directory.Exists(path) Then
                 Console.WriteLine("That path exists already.")
                 Return
             End If
             Dim di As DirectoryInfo = Directory.CreateDirectory(path)
-            Dim username_Write As New System.IO.StreamWriter(path & UserName & "username.dll")
+            Dim username_Write As New System.IO.StreamWriter(path & UserName & "\username.dll")
             username_Write.Write(UserName)
             username_Write.Close()
-            Dim password_Write As New System.IO.StreamWriter(path & UserName & "password.dll")
+            Dim password_Write As New System.IO.StreamWriter(path & UserName & "\password.dll")
 
             'Generate Hash
             Dim strToHash As String
@@ -34,12 +34,10 @@ Public Class Class1
 
             password_Write.Write(strResult)
             password_Write.Close()
+            Return
         Catch ex As Exception
-
+            Console.WriteLine("Error")
+            Debug.WriteLine(ex.Message & "error")
         End Try
     End Sub
-
-
-
-
 End Class

@@ -106,5 +106,11 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ForestOSUtilities\ForestOSUtilities.vbproj">
+      <Project>{0ebab124-be39-4f3d-a306-a7d14d677322}</Project>
+      <Name>ForestOSUtilities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
