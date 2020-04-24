@@ -1,0 +1,12 @@
+version: 1.0.{build}
+image: Visual Studio 2019
+configuration:
+- Debug
+- Release
+platform: Any CPU
+clone_folder: C:\TheCrafters001\Build\Forest-OS\src\bin
+before_build:
+- ps: nuget restore 'C:\TheCrafters001\Build\Forest-OS\src\bin\src\Forest OS.sln'
+build:
+  project: src\Forest OS.sln
+  verbosity: minimal
