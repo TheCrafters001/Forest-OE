@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Forest-OS-Console")>
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyTitle("Forest-OS Console")>
+<Assembly: AssemblyDescription("Console for Forest-OS")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("Forest-OS-Console")>
-<Assembly: AssemblyCopyright("Copyright ©  2020")>
+<Assembly: AssemblyCopyright("Copyright © TheCrafters001 2020")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

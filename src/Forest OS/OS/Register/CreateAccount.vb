@@ -15,7 +15,9 @@ Public Class CreateAccount
     ' such as the username, display name, etc.
 
     Private Sub OK_Click(sender As Object, e As EventArgs) Handles OK.Click
-        If My.Computer.FileSystem.DirectoryExists(" C:\TheCrafters001 OS\") = True Then
+        Dim path As String
+        path = "C:\Forest-OS\User\"
+        If My.Computer.FileSystem.DirectoryExists(path) = True Then
         Else
         End If
         If UsernameTextBox.Text = "" Then
@@ -26,8 +28,8 @@ Public Class CreateAccount
         If PasswordTextBox.Text = "" Then
             UsernameLabel.Text = "Error, please insert a password"
         Else
-            MkDir("C:\TheCrafters001 OS\Users\" + UsernameTextBox.Text)
-            Dim username As New System.IO.StreamWriter("C:\TheCrafters001 OS\Users\" + UsernameTextBox.Text + "\" + "username.dll")
+            MkDir(path + UsernameTextBox.Text)
+            Dim username As New System.IO.StreamWriter(path + UsernameTextBox.Text + "\" + "username.dll")
             username.Write(UsernameTextBox.Text)
             username.Close()
 
@@ -42,20 +44,12 @@ Public Class CreateAccount
             tmpHash = New MD5CryptoServiceProvider().ComputeHash(tmpSource)
 
 
-            Dim password As New System.IO.StreamWriter("C:\TheCrafters001 OS\Users\" + UsernameTextBox.Text + "\" + "password.dll")
+            Dim password As New System.IO.StreamWriter(path + UsernameTextBox.Text + "\" + "password.dll")
             password.Write(ByteArrayToString(tmpHash))
             password.Close()
             UsernameLabel.Text = "Account Verified"
             MsgBox(UsernameLabel.Text)
-            Dim result As Integer = MessageBox.Show("Your account has been created. You will automaticly be signed in of you press OK, press Cancel to not login.", "Account Created", MessageBoxButtons.OKCancel, MessageBoxIcon.Information)
-            If result = DialogResult.OK Then
-                'ServiceStarter.Show()
-                Login.Close()
-                Me.Close()
-            ElseIf result = DialogResult.Cancel Then
-                Login.Show()
-                Me.Close()
-            End If
+            MessageBox.Show("Please login from the login menu to access your account! In a future update, this create accoune menu will be moved.")
         End If
 
     End Sub

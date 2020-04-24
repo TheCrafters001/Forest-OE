@@ -126,6 +126,18 @@
     <Compile Include="OS\System\Background.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="OS\System\Login_System\ServiceStarter.Designer.vb">
+      <DependentUpon>ServiceStarter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OS\System\Login_System\ServiceStarter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OS\User\Desktop\Desktop.Designer.vb">
+      <DependentUpon>Desktop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OS\User\Desktop\Desktop.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -145,6 +157,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\System\Background.resx">
       <DependentUpon>Background.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\System\Login_System\ServiceStarter.resx">
+      <DependentUpon>ServiceStarter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\User\Desktop\Desktop.resx">
+      <DependentUpon>Desktop.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -187,7 +205,15 @@
     <Folder Include="OS\Desktop\" />
     <Folder Include="OS\Programs\" />
     <Folder Include="OS\Settings\" />
-    <Folder Include="OS\User\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Poweroff.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

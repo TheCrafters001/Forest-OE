@@ -53,7 +53,7 @@ Public Class Login
                 Else
                     If passline = PASSREAD.ReadLine() = True Then ' start services
                         UsernameLabel.Text = "You're Logged In"
-                        'ServiceStarter.Show()
+                        ServiceStarter.Show()
                         Me.Close()
                     End If
                 End If

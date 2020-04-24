@@ -9,10 +9,10 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("Forest OS")>
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyDescription("An operating system built with VB.NET!")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("Forest OS")>
-<Assembly: AssemblyCopyright("Copyright ©  2020")>
+<Assembly: AssemblyCopyright("Copyright © TheCrafters001 2020")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
