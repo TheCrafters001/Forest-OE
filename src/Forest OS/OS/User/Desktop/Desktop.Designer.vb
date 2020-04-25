@@ -25,13 +25,6 @@ Partial Class Desktop
         Me.components = New System.ComponentModel.Container()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.TestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitToWindowsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ShutdownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.ProgramsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InternetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChromeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -40,7 +33,15 @@ Partial Class Desktop
         Me.PowershellToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CommandPromptToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WinverToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToWindowsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShutdownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.FileExplorerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -63,11 +64,68 @@ Partial Class Desktop
         Me.TestToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
         Me.TestToolStripMenuItem.Text = "Menu"
         '
+        'ProgramsToolStripMenuItem
+        '
+        Me.ProgramsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InternetToolStripMenuItem, Me.PowerUserToolStripMenuItem, Me.FileExplorerToolStripMenuItem})
+        Me.ProgramsToolStripMenuItem.Name = "ProgramsToolStripMenuItem"
+        Me.ProgramsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ProgramsToolStripMenuItem.Text = "Programs"
+        '
+        'InternetToolStripMenuItem
+        '
+        Me.InternetToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChromeToolStripMenuItem, Me.FirefoxToolStripMenuItem})
+        Me.InternetToolStripMenuItem.Name = "InternetToolStripMenuItem"
+        Me.InternetToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.InternetToolStripMenuItem.Text = "Internet"
+        '
+        'ChromeToolStripMenuItem
+        '
+        Me.ChromeToolStripMenuItem.Name = "ChromeToolStripMenuItem"
+        Me.ChromeToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.ChromeToolStripMenuItem.Text = "Chrome"
+        '
+        'FirefoxToolStripMenuItem
+        '
+        Me.FirefoxToolStripMenuItem.Name = "FirefoxToolStripMenuItem"
+        Me.FirefoxToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.FirefoxToolStripMenuItem.Text = "Firefox"
+        '
+        'PowerUserToolStripMenuItem
+        '
+        Me.PowerUserToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PowershellToolStripMenuItem, Me.CommandPromptToolStripMenuItem, Me.WinverToolStripMenuItem})
+        Me.PowerUserToolStripMenuItem.Name = "PowerUserToolStripMenuItem"
+        Me.PowerUserToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PowerUserToolStripMenuItem.Text = "Power User"
+        '
+        'PowershellToolStripMenuItem
+        '
+        Me.PowershellToolStripMenuItem.Name = "PowershellToolStripMenuItem"
+        Me.PowershellToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PowershellToolStripMenuItem.Text = "Powershell"
+        '
+        'CommandPromptToolStripMenuItem
+        '
+        Me.CommandPromptToolStripMenuItem.Name = "CommandPromptToolStripMenuItem"
+        Me.CommandPromptToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CommandPromptToolStripMenuItem.Text = "Command Prompt"
+        '
+        'WinverToolStripMenuItem
+        '
+        Me.WinverToolStripMenuItem.Name = "WinverToolStripMenuItem"
+        Me.WinverToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.WinverToolStripMenuItem.Text = "winver"
+        '
         'SettingsToolStripMenuItem
         '
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
         Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SettingsToolStripMenuItem.Text = "Settings"
+        '
+        'AboutToolStripMenuItem
+        '
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Text = "About"
         '
         'ToolStripSeparator1
         '
@@ -107,62 +165,11 @@ Partial Class Desktop
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "HH:MM:SS TT"
         '
-        'ProgramsToolStripMenuItem
+        'FileExplorerToolStripMenuItem
         '
-        Me.ProgramsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InternetToolStripMenuItem, Me.PowerUserToolStripMenuItem})
-        Me.ProgramsToolStripMenuItem.Name = "ProgramsToolStripMenuItem"
-        Me.ProgramsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ProgramsToolStripMenuItem.Text = "Programs"
-        '
-        'InternetToolStripMenuItem
-        '
-        Me.InternetToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChromeToolStripMenuItem, Me.FirefoxToolStripMenuItem})
-        Me.InternetToolStripMenuItem.Name = "InternetToolStripMenuItem"
-        Me.InternetToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.InternetToolStripMenuItem.Text = "Internet"
-        '
-        'ChromeToolStripMenuItem
-        '
-        Me.ChromeToolStripMenuItem.Name = "ChromeToolStripMenuItem"
-        Me.ChromeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ChromeToolStripMenuItem.Text = "Chrome"
-        '
-        'FirefoxToolStripMenuItem
-        '
-        Me.FirefoxToolStripMenuItem.Name = "FirefoxToolStripMenuItem"
-        Me.FirefoxToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.FirefoxToolStripMenuItem.Text = "Firefox"
-        '
-        'PowerUserToolStripMenuItem
-        '
-        Me.PowerUserToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PowershellToolStripMenuItem, Me.CommandPromptToolStripMenuItem, Me.WinverToolStripMenuItem})
-        Me.PowerUserToolStripMenuItem.Name = "PowerUserToolStripMenuItem"
-        Me.PowerUserToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.PowerUserToolStripMenuItem.Text = "Power User"
-        '
-        'PowershellToolStripMenuItem
-        '
-        Me.PowershellToolStripMenuItem.Name = "PowershellToolStripMenuItem"
-        Me.PowershellToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.PowershellToolStripMenuItem.Text = "Powershell"
-        '
-        'CommandPromptToolStripMenuItem
-        '
-        Me.CommandPromptToolStripMenuItem.Name = "CommandPromptToolStripMenuItem"
-        Me.CommandPromptToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.CommandPromptToolStripMenuItem.Text = "Command Prompt"
-        '
-        'WinverToolStripMenuItem
-        '
-        Me.WinverToolStripMenuItem.Name = "WinverToolStripMenuItem"
-        Me.WinverToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.WinverToolStripMenuItem.Text = "winver"
-        '
-        'AboutToolStripMenuItem
-        '
-        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.AboutToolStripMenuItem.Text = "About"
+        Me.FileExplorerToolStripMenuItem.Name = "FileExplorerToolStripMenuItem"
+        Me.FileExplorerToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FileExplorerToolStripMenuItem.Text = "File Explorer"
         '
         'Desktop
         '
@@ -204,4 +211,5 @@ Partial Class Desktop
     Friend WithEvents CommandPromptToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents WinverToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FileExplorerToolStripMenuItem As ToolStripMenuItem
 End Class
