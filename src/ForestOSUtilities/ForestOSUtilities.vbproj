@@ -70,6 +70,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckFIles.vb" />
     <Compile Include="Class1.vb" />
     <Compile Include="ExplorerStatusChanger.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

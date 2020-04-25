@@ -111,6 +111,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="OS\Login\First Time Setup\Setup_Page2.Designer.vb">
+      <DependentUpon>Setup_Page2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Login\First Time Setup\Setup_Page2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OS\Login\First Time Setup\Setup_Page1.Designer.vb">
+      <DependentUpon>Setup_Page1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Login\First Time Setup\Setup_Page1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OS\Login\First Time Setup\Setup_Page3.Designer.vb">
+      <DependentUpon>Setup_Page3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Login\First Time Setup\Setup_Page3.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="OS\Login\Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -169,6 +187,15 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Login\First Time Setup\Setup_Page2.resx">
+      <DependentUpon>Setup_Page2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Login\First Time Setup\Setup_Page1.resx">
+      <DependentUpon>Setup_Page1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Login\First Time Setup\Setup_Page3.resx">
+      <DependentUpon>Setup_Page3.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Login\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -243,6 +270,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Poweroff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Setup_Large.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Setup_Small.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
