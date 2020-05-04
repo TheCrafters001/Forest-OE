@@ -32,8 +32,8 @@ Public Class CreateAccount
                 If PasswordTextBox.Text = "" Then
                     UsernameLabel.Text = "Error, please insert a password"
                 Else
-                    MkDir(path & UsernameTextBox.Text)
-                    Dim username As New System.IO.StreamWriter(path & ComboBox1.Text & UsernameTextBox.Text & "\" & "username.dll")
+                    MkDir(path & ComboBox1.Text & "\" & UsernameTextBox.Text)
+                    Dim username As New System.IO.StreamWriter(path & ComboBox1.Text & "\" & UsernameTextBox.Text & "\" & "username.dll")
                     username.Write(UsernameTextBox.Text)
                     username.Close()
 
@@ -48,7 +48,7 @@ Public Class CreateAccount
                     tmpHash = New MD5CryptoServiceProvider().ComputeHash(tmpSource)
 
 
-                    Dim password As New System.IO.StreamWriter(path & ComboBox1.Text & UsernameTextBox.Text & "\" & "password.dll")
+                    Dim password As New System.IO.StreamWriter(path & ComboBox1.Text & "\" & UsernameTextBox.Text & "\" & "password.dll")
                     password.Write(ByteArrayToString(tmpHash))
                     password.Close()
                     UsernameLabel.Text = "Account Verified"

@@ -141,6 +141,12 @@
     <Compile Include="OS\Programs\Explorer\Explorer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="OS\Programs\Run\Run.Designer.vb">
+      <DependentUpon>Run.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Programs\Run\Run.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="OS\Register\CreateAccount.Designer.vb">
       <DependentUpon>CreateAccount.vb</DependentUpon>
     </Compile>
@@ -202,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Programs\Explorer\Explorer.resx">
       <DependentUpon>Explorer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Programs\Run\Run.resx">
+      <DependentUpon>Run.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Register\CreateAccount.resx">
       <DependentUpon>CreateAccount.vb</DependentUpon>
