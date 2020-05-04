@@ -105,6 +105,7 @@ Partial Class Login
         '
         'Create
         '
+        Me.Create.Enabled = False
         Me.Create.Location = New System.Drawing.Point(94, 161)
         Me.Create.Name = "Create"
         Me.Create.Size = New System.Drawing.Size(97, 23)

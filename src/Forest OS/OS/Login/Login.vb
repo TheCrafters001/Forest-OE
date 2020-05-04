@@ -24,15 +24,16 @@ Public Class Login
             If UsernameTextBox.Text = "" Then
                 ' Error if nothing has been typed in.
                 UsernameLabel.Text = "Error, More than one character required"
+            ElseIf ComboBox1.Text = "" Then
+                Label1.Text = "Please select an Account type."
             Else
                 ' Start login process.
                 If My.Computer.FileSystem.DirectoryExists(path + UsernameTextBox.Text + "\") Then ' Check if the Username entered exist.
-                    Dim USERREAD As System.IO.StreamReader = New System.IO.StreamReader(path + UsernameTextBox.Text + "\" + "USERNAME.DLL") ' If Exist, read file contents
+                    Dim USERREAD As System.IO.StreamReader = New System.IO.StreamReader(path & ComboBox1.Text & "\" & UsernameTextBox.Text & "\" & "USERNAME.DLL") ' If Exist, read file contents
                     Dim userline As String
-                    Dim PASSREAD As System.IO.StreamReader = New System.IO.StreamReader(path + UsernameTextBox.Text + "\" + "PASSWORD.DLL") ' If Exist, read password.
+                    Dim PASSREAD As System.IO.StreamReader = New System.IO.StreamReader(path & ComboBox1.Text & "\" & UsernameTextBox.Text & "\" & "PASSWORD.DLL") ' If Exist, read password.
                     Dim passline As String
                     Do
-
                         ' Load all security data.
                         Dim sSourceData As String
                         Dim tmpSource() As Byte

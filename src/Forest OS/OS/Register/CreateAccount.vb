@@ -26,11 +26,10 @@ Public Class CreateAccount
                 End If
                 If UsernameTextBox.Text = "" Then
                     UsernameLabel.Text = "Error, More than one character required"
-                Else
-                End If
-
-                If PasswordTextBox.Text = "" Then
+                ElseIf PasswordTextBox.Text = "" Then
                     UsernameLabel.Text = "Error, please insert a password"
+                ElseIf ComboBox1.Text = "" Then
+                    Label1.Text = "Please select an Account type."
                 Else
                     MkDir(path & ComboBox1.Text & "\" & UsernameTextBox.Text)
                     Dim username As New System.IO.StreamWriter(path & ComboBox1.Text & "\" & UsernameTextBox.Text & "\" & "username.dll")
@@ -71,7 +70,7 @@ Public Class CreateAccount
     End Function
 
     Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles Cancel.Click
-        Login.Show()
+        'Login.Show()
         Me.Close()
     End Sub
 

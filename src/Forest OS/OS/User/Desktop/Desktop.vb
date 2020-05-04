@@ -14,9 +14,8 @@ Public Class Desktop
     End Sub
 
     Private Sub ShutdownToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShutdownToolStripMenuItem.Click
-        MessageBox.Show("Shutdown Function coming soon, will just end application.")
-        ExplorerStatusChanger.StartExplorer()
-        End
+        Shutdown.Show()
+        Me.Close()
     End Sub
 
     Private Sub SettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SettingsToolStripMenuItem.Click
@@ -29,5 +28,9 @@ Public Class Desktop
 
     Private Sub FileExplorerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FileExplorerToolStripMenuItem.Click
         Explorer.Show()
+    End Sub
+
+    Private Sub RunToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RunToolStripMenuItem.Click
+        Run.Show()
     End Sub
 End Class

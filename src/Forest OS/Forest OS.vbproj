@@ -183,6 +183,12 @@
     <Compile Include="OS\System\Login_System\ServiceStarter.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="OS\System\Shutdown\Shutdown.Designer.vb">
+      <DependentUpon>Shutdown.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OS\System\Shutdown\Shutdown.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="OS\User\Desktop\Desktop.Designer.vb">
       <DependentUpon>Desktop.vb</DependentUpon>
     </Compile>
@@ -236,6 +242,9 @@
     <EmbeddedResource Include="OS\System\Login_System\ServiceStarter.resx">
       <DependentUpon>ServiceStarter.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OS\System\Shutdown\Shutdown.resx">
+      <DependentUpon>Shutdown.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\User\Desktop\Desktop.resx">
       <DependentUpon>Desktop.vb</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +288,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="OS\Desktop\" />
+    <Folder Include="OS\System\ExitToWindows\" />
+    <Folder Include="OS\System\Logout\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logout.png" />

@@ -109,6 +109,7 @@ Partial Class Explorer
         Me.Name = "Explorer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Explorer"
+        Me.TopMost = True
         Me.cmClipboardOp.ResumeLayout(False)
         Me.ResumeLayout(False)
 

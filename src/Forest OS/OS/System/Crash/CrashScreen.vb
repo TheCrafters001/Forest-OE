@@ -7,7 +7,17 @@ Public Class CrashScreen
 
 
         'Close All Applications of Forest-OS
-        Login.Close()
-        Background.Close()
+        Dim remainOpenForms As New HashSet(Of String)
+        remainOpenForms.Add("Oh no!")
+
+        ' Create collection of forms to be closed
+        Dim formsToClose As New List(Of Form)
+        For Each form As Form In Application.OpenForms
+            If remainOpenForms.Contains(form.Text) = False Then formsToClose.Add(form)
+        Next
+
+        For Each form As Form In formsToClose
+            form.Close()
+        Next
     End Sub
 End Class
