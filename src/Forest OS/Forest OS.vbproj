@@ -171,6 +171,12 @@
     <Compile Include="OS\System\Background.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="OS\System\Crash\CrashScreen.Designer.vb">
+      <DependentUpon>CrashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OS\System\Crash\CrashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="OS\System\Login_System\ServiceStarter.Designer.vb">
       <DependentUpon>ServiceStarter.vb</DependentUpon>
     </Compile>
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\System\Background.resx">
       <DependentUpon>Background.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\System\Crash\CrashScreen.resx">
+      <DependentUpon>CrashScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\System\Login_System\ServiceStarter.resx">
       <DependentUpon>ServiceStarter.vb</DependentUpon>

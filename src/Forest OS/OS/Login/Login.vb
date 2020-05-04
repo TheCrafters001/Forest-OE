@@ -18,48 +18,54 @@ Public Class Login
     ' such as the username, display name, etc.
 
     Private Sub OK_Click(sender As Object, e As EventArgs) Handles OK.Click
-        Dim path As String
-        path = "C:\Forest-OS\User\"
-        If UsernameTextBox.Text = "" Then
-            ' Error if nothing has been typed in.
-            UsernameLabel.Text = "Error, More than one character required"
-        Else
-            ' Start login process.
-            If My.Computer.FileSystem.DirectoryExists(path + UsernameTextBox.Text + "\") Then ' Check if the Username entered exist.
-                Dim USERREAD As System.IO.StreamReader = New System.IO.StreamReader(path + UsernameTextBox.Text + "\" + "USERNAME.DLL") ' If Exist, read file contents
-                Dim userline As String
-                Dim PASSREAD As System.IO.StreamReader = New System.IO.StreamReader(path + UsernameTextBox.Text + "\" + "PASSWORD.DLL") ' If Exist, read password.
-                Dim passline As String
-                Do
+        Try
+            Dim path As String
+            path = "C:\Forest-OS\User\"
+            If UsernameTextBox.Text = "" Then
+                ' Error if nothing has been typed in.
+                UsernameLabel.Text = "Error, More than one character required"
+            Else
+                ' Start login process.
+                If My.Computer.FileSystem.DirectoryExists(path + UsernameTextBox.Text + "\") Then ' Check if the Username entered exist.
+                    Dim USERREAD As System.IO.StreamReader = New System.IO.StreamReader(path + UsernameTextBox.Text + "\" + "USERNAME.DLL") ' If Exist, read file contents
+                    Dim userline As String
+                    Dim PASSREAD As System.IO.StreamReader = New System.IO.StreamReader(path + UsernameTextBox.Text + "\" + "PASSWORD.DLL") ' If Exist, read password.
+                    Dim passline As String
+                    Do
 
-                    ' Load all security data.
-                    Dim sSourceData As String
-                    Dim tmpSource() As Byte
-                    Dim tmpHash() As Byte
-                    sSourceData = "MySourceData"
-                    'Create a byte array from source data.
-                    tmpSource = ASCIIEncoding.ASCII.GetBytes(sSourceData)
-                    'Compute hash based on source data.
-                    tmpHash = New MD5CryptoServiceProvider().ComputeHash(tmpSource)
+                        ' Load all security data.
+                        Dim sSourceData As String
+                        Dim tmpSource() As Byte
+                        Dim tmpHash() As Byte
+                        sSourceData = "MySourceData"
+                        'Create a byte array from source data.
+                        tmpSource = ASCIIEncoding.ASCII.GetBytes(sSourceData)
+                        'Compute hash based on source data.
+                        tmpHash = New MD5CryptoServiceProvider().ComputeHash(tmpSource)
 
 
-                    passline = ByteArrayToString(tmpHash)
-                    userline = USERREAD.ReadLine
-                    Console.WriteLine(passline)
-                    Console.WriteLine(userline)
-                Loop Until userline Is Nothing
-                If PasswordTextBox.Text = "" Then
-                    ' Error if no password is entered.
-                    PasswordLabel.Text = "Error, please insert a password"
-                Else
-                    If passline = PASSREAD.ReadLine() = True Then ' start services
-                        UsernameLabel.Text = "You're Logged In"
-                        ServiceStarter.Show()
-                        Me.Close()
+                        passline = ByteArrayToString(tmpHash)
+                        userline = USERREAD.ReadLine
+                        Console.WriteLine(passline)
+                        Console.WriteLine(userline)
+                    Loop Until userline Is Nothing
+                    If PasswordTextBox.Text = "" Then
+                        ' Error if no password is entered.
+                        PasswordLabel.Text = "Error, please insert a password"
+                    Else
+                        If passline = PASSREAD.ReadLine() = True Then ' start services
+                            UsernameLabel.Text = "You're Logged In"
+                            ServiceStarter.Show()
+                            Me.Close()
+                        End If
                     End If
                 End If
             End If
-        End If
+        Catch ex As Exception
+            CrashScreen.Show()
+            CrashScreen.Label2.Text = "What Caused Crash: Login Attempt"
+            CrashScreen.Label5.Text = ex.Message
+        End Try
     End Sub
 
     Private Function ByteArrayToString(ByVal arrInput() As Byte) As String
