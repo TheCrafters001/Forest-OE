@@ -61,6 +61,33 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property Forest_OS_Critical_Stop() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Forest_OS_Critical_Stop", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property Forest_OS_Error() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Forest_OS_Error", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property Forest_OS_Login() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Forest_OS_Login", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         '''</summary>
         Friend ReadOnly Property Forest_OS_Logo() As System.Drawing.Icon
@@ -97,6 +124,42 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("Forest_OS_Logo1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property Forest_OS_Logout() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Forest_OS_Logout", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property Forest_OS_Shutdown() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Forest_OS_Shutdown", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property Forest_OS_Startup() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Forest_OS_Startup", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property Forest_OS_Welcome() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Forest_OS_Welcome", resourceCulture)
             End Get
         End Property
         

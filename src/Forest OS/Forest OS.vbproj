@@ -306,5 +306,26 @@
   <ItemGroup>
     <None Include="Resources\Setup_Small.bmp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forest-OS-Critical Stop.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forest-OS-Error.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forest-OS-Login.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forest-OS-Logout.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forest-OS-Shutdown.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forest-OS-Startup.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forest-OS-Welcome.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

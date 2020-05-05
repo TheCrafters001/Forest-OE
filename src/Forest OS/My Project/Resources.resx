@@ -145,4 +145,25 @@
   <data name="Setup_Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Setup_Small.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Forest_OS_Critical_Stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Forest-OS-Critical Stop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Forest_OS_Error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Forest-OS-Error.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Forest_OS_Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Forest-OS-Login.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Forest_OS_Logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Forest-OS-Logout.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Forest_OS_Shutdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Forest-OS-Shutdown.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Forest_OS_Startup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Forest-OS-Startup.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Forest_OS_Welcome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Forest-OS-Welcome.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

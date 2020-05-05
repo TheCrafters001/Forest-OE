@@ -89,5 +89,6 @@ Public Class Login
     End Sub
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        My.Computer.Audio.Play(My.Resources.Forest_OS_Startup, AudioPlayMode.Background)
     End Sub
 End Class

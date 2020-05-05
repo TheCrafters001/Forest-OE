@@ -2,6 +2,7 @@
 
 Public Class Shutdown
     Private Sub Shutdown_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        My.Computer.Audio.Play(My.Resources.Forest_OS_Shutdown, AudioPlayMode.Background)
         ProgressBar1.Style = ProgressBarStyle.Marquee
         ProgressBar1.MarqueeAnimationSpeed = 50
         Timer1.Start()

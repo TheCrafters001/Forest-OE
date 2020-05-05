@@ -18,6 +18,7 @@
             Label1.Text = "Preparing Desktop..."
         End If
         If ProgressBar2.Value = 100 Then
+            My.Computer.Audio.Play(My.Resources.Forest_OS_Login, AudioPlayMode.Background)
             Desktop.Show()
             Me.Close()
         End If

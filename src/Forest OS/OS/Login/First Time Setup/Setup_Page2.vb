@@ -18,14 +18,11 @@ Public Class Setup_Page2
             End If
             If UsernameTextBox.Text = "" Then
                 UsernameLabel.Text = "Error, More than one character required"
-            Else
-            End If
-
-            If PasswordTextBox.Text = "" Then
+            ElseIf PasswordTextBox.Text = "" Then
                 UsernameLabel.Text = "Error, please insert a password"
             Else
-                MkDir(path & UsernameTextBox.Text)
-                Dim username As New System.IO.StreamWriter(path & "Admin\" & UsernameTextBox.Text & "\" & "username.dll")
+                MkDir(path & "Admin" & "\" & UsernameTextBox.Text)
+                Dim username As New System.IO.StreamWriter(path & "Admin" & "\" & UsernameTextBox.Text & "\" & "username.dll")
                 username.Write(UsernameTextBox.Text)
                 username.Close()
 
@@ -40,13 +37,13 @@ Public Class Setup_Page2
                 tmpHash = New MD5CryptoServiceProvider().ComputeHash(tmpSource)
 
 
-                Dim password As New System.IO.StreamWriter(path & "Admin\" & UsernameTextBox.Text & "\" & "password.dll")
+                Dim password As New System.IO.StreamWriter(path & "Admin" & "\" & UsernameTextBox.Text & "\" & "password.dll")
                 password.Write(ByteArrayToString(tmpHash))
                 password.Close()
                 UsernameLabel.Text = "Account Verified"
-                Button1.Enabled = True
                 MsgBox(UsernameLabel.Text)
-                MessageBox.Show("Please login from the login menu to access your account! In a future update, this create accoune menu will be moved.")
+                MessageBox.Show("Account: " & UsernameTextBox.Text & " created! To use this " & "Admin" & " account, please logout, and login using the information you have given!")
+                Button1.Enabled = True
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "An error happened.")

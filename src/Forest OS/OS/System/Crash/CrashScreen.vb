@@ -2,6 +2,7 @@
 Public Class CrashScreen
     Private Sub CrashScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Console.Beep()
+        My.Computer.Audio.Play(My.Resources.Forest_OS_Critical_Stop, AudioPlayMode.Background)
         Label3.Text = "Time of Crash: " & TimeOfDay
         ForestOSUtilities.ExplorerStatusChanger.StartExplorer()
 
