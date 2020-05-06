@@ -336,5 +336,8 @@
   <ItemGroup>
     <None Include="Resources\Forest-OS-Welcome.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="NLog.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
