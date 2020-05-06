@@ -46,11 +46,6 @@ Public Class Login
 
                     passline = ByteArrayToString(tmpHash)
                     userline = USERREAD.ReadLine
-                    Console.WriteLine(passline)
-                    Console.WriteLine(userline)
-                    Console.WriteLine(path & ComboBox1.Text & "\" & UsernameTextBox.Text & "\username.dll")
-                    Console.WriteLine(My.Computer.FileSystem.ReadAllText(path & ComboBox1.Text & "\" & UsernameTextBox.Text & "\password.dll"))
-
                 Loop Until userline Is Nothing
                 If passline = PASSREAD.ReadLine() = True Then
                     UsernameLabel.Text = "You're Logged In"

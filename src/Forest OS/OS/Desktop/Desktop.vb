@@ -39,10 +39,16 @@ Public Class Desktop
     End Sub
 
     Private Sub InternetExplorerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InternetExplorerToolStripMenuItem.Click
-        If Not My.Computer.FileSystem.DirectoryExists("C:\Program Files (x86)\Internet Explorer\") Then
-            Shell("C:\Program Files\Internet Explorer\iexplore.exe")
-        ElseIf Not My.Computer.FileSystem.DirectoryExists("C:\Program Files\Internet Explorer\") Then
-            Shell("C:\Program Files (x86)\Internet Explorer\iexplore.exe")
-        End If
+        Try
+            If Not My.Computer.FileSystem.DirectoryExists("C:\Program Files (x86)\Internet Explorer\") Then
+                Process.Start("C:\Program Files\Internet Explorer\iexplore.exe")
+            ElseIf Not My.Computer.FileSystem.DirectoryExists("C:\Program Files\Internet Explorer\") Then
+                Process.Start("C:\Program Files (x86)\Internet Explorer\iexplore.exe")
+            End If
+        Catch ex As Exception
+            CrashScreen.Show()
+            CrashScreen.Label2.Text = "What Caused Crash: Application Launch Event  Failed"
+            CrashScreen.Label5.Text = ex.Message
+        End Try
     End Sub
 End Class
