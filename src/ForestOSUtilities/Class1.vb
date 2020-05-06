@@ -6,44 +6,39 @@ Imports System.IO
 Imports System.IO.File
 
 Public Class Class1
-    Public Shared Sub CreateUser(ByVal Password As String, ByVal UserName As String, Usertype As String)
-        Try
-            Dim path As String
-            path = "C:\Forest-OS\User\"
-            'If Directory.Exists(path) Then
-            'Console.WriteLine("That path exists already.")
-            'Return
-            'End If
-            MkDir(path & Usertype & "\" & UserName)
-            Dim di As DirectoryInfo = Directory.CreateDirectory(path)
-            Dim username_Write As New System.IO.StreamWriter(path & Usertype & "\" & UserName & "\username.dll")
-            username_Write.Write(UserName)
-            username_Write.Close()
-            Dim password_Write As New System.IO.StreamWriter(path & Usertype & "\" & UserName & "\password.dll")
+    Public Shared Sub CreateUser(ByVal PasswordInput As String, ByVal UsernameInput As String, ByVal Usertype As String)
+        Dim path As String
+        path = "C:\Forest-OS\User\"
+        'If Directory.Exists(path) Then
+        'Console.WriteLine("That path exists already.")
+        'Return
+        'End If
+        MkDir(path & Usertype & "\" & UsernameInput)
+        Dim username As New System.IO.StreamWriter(path & Usertype & "\" & UsernameInput & "\" & "username.dll")
+        username.Write(UsernameInput)
+        username.Close()
 
-            'Generate Hash
-            Dim strToHash As String
-            strToHash = Password
-            Dim md5Obj As New Security.Cryptography.MD5CryptoServiceProvider
-            Dim bytesToHash() As Byte = System.Text.Encoding.ASCII.GetBytes(strToHash)
-
-            bytesToHash = md5Obj.ComputeHash(bytesToHash)
-
-            Dim strResult As String = ""
-
-            For Each b As Byte In bytesToHash
-                strResult += b.ToString("x2")
-            Next
+        ' Load all security data.
+        Dim sSourceData As String
+        Dim tmpSource() As Byte
+        Dim tmpHash() As Byte
+        sSourceData = "MySourceData"
+        'Create a byte array from source data.
+        tmpSource = ASCIIEncoding.ASCII.GetBytes(sSourceData)
+        'Compute hash based on source data.
+        tmpHash = New MD5CryptoServiceProvider().ComputeHash(tmpSource)
 
 
-
-            password_Write.Write(strResult)
-            password_Write.Close()
-            Console.WriteLine("Created a user called: " & UserName & " that has the account type: " & Usertype)
-            Return
-        Catch ex As Exception
-            Console.WriteLine("Error")
-            Debug.WriteLine(ex.Message & "error")
-        End Try
+        Dim password As New System.IO.StreamWriter(path & Usertype & "\" & UsernameInput & "\" & "password.dll")
+        password.Write(ByteArrayToString(tmpHash))
+        password.Close()
     End Sub
+    Public Shared Function ByteArrayToString(ByVal arrInput() As Byte) As String
+        Dim i As Integer
+        Dim sOutput As New StringBuilder(arrInput.Length)
+        For i = 0 To arrInput.Length - 1
+            sOutput.Append(arrInput(i).ToString("X2"))
+        Next
+        Return sOutput.ToString()
+    End Function
 End Class
