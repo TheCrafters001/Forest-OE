@@ -189,10 +189,10 @@
     <Compile Include="OS\System\Shutdown\Shutdown.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OS\User\Desktop\Desktop.Designer.vb">
+    <Compile Include="OS\Desktop\Desktop.Designer.vb">
       <DependentUpon>Desktop.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\User\Desktop\Desktop.vb">
+    <Compile Include="OS\Desktop\Desktop.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -245,7 +245,7 @@
     <EmbeddedResource Include="OS\System\Shutdown\Shutdown.resx">
       <DependentUpon>Shutdown.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\User\Desktop\Desktop.resx">
+    <EmbeddedResource Include="OS\Desktop\Desktop.resx">
       <DependentUpon>Desktop.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
@@ -287,9 +287,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="OS\Desktop\" />
     <Folder Include="OS\System\ExitToWindows\" />
     <Folder Include="OS\System\Logout\" />
+    <Folder Include="OS\User\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logout.png" />

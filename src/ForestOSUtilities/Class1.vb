@@ -10,10 +10,11 @@ Public Class Class1
         Try
             Dim path As String
             path = "C:\Forest-OS\User\"
-            If Directory.Exists(path) Then
-                Console.WriteLine("That path exists already.")
-                Return
-            End If
+            'If Directory.Exists(path) Then
+            'Console.WriteLine("That path exists already.")
+            'Return
+            'End If
+            MkDir(path & Usertype & "\" & UserName)
             Dim di As DirectoryInfo = Directory.CreateDirectory(path)
             Dim username_Write As New System.IO.StreamWriter(path & Usertype & "\" & UserName & "\username.dll")
             username_Write.Write(UserName)

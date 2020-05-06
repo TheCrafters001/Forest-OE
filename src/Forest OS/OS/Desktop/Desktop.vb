@@ -33,4 +33,16 @@ Public Class Desktop
     Private Sub RunToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RunToolStripMenuItem.Click
         Run.Show()
     End Sub
+
+    Private Sub ChromeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChromeToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub InternetExplorerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InternetExplorerToolStripMenuItem.Click
+        If Not My.Computer.FileSystem.DirectoryExists("C:\Program Files (x86)\Internet Explorer\") Then
+            Shell("C:\Program Files\Internet Explorer\iexplore.exe")
+        ElseIf Not My.Computer.FileSystem.DirectoryExists("C:\Program Files\Internet Explorer\") Then
+            Shell("C:\Program Files (x86)\Internet Explorer\iexplore.exe")
+        End If
+    End Sub
 End Class

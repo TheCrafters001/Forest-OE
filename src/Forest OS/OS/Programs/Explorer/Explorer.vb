@@ -145,4 +145,8 @@ Public Class Explorer
     Private Const SHGFI_SMALLICON = &H1 'Small Icon
     Private Const SHGFI_LARGEICON = &H0    ' Large icon
     Private Const MAX_PATH = 260 'Path to Icon
+
+    Private Sub lvFiles_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lvFiles.SelectedIndexChanged
+
+    End Sub
 End Class

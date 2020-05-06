@@ -40,9 +40,14 @@ Partial Class Desktop
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToWindowsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShutdownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RunToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.RunToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.InternetExplorerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MicrosoftEdgeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OperaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -74,15 +79,15 @@ Partial Class Desktop
         '
         'InternetToolStripMenuItem
         '
-        Me.InternetToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChromeToolStripMenuItem, Me.FirefoxToolStripMenuItem})
+        Me.InternetToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChromeToolStripMenuItem, Me.FirefoxToolStripMenuItem, Me.InternetExplorerToolStripMenuItem, Me.MicrosoftEdgeToolStripMenuItem, Me.OperaToolStripMenuItem})
         Me.InternetToolStripMenuItem.Name = "InternetToolStripMenuItem"
-        Me.InternetToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
+        Me.InternetToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.InternetToolStripMenuItem.Text = "Internet"
         '
         'ChromeToolStripMenuItem
         '
         Me.ChromeToolStripMenuItem.Name = "ChromeToolStripMenuItem"
-        Me.ChromeToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.ChromeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ChromeToolStripMenuItem.Text = "Chrome"
         '
         'FirefoxToolStripMenuItem
@@ -125,39 +130,45 @@ Partial Class Desktop
         'SettingsToolStripMenuItem
         '
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
         Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(156, 6)
         '
         'LogoutToolStripMenuItem
         '
         Me.LogoutToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.Logout
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'ExitToWindowsToolStripMenuItem
         '
         Me.ExitToWindowsToolStripMenuItem.Name = "ExitToWindowsToolStripMenuItem"
-        Me.ExitToWindowsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToWindowsToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
         Me.ExitToWindowsToolStripMenuItem.Text = "Exit to Windows"
         '
         'ShutdownToolStripMenuItem
         '
         Me.ShutdownToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.Poweroff
         Me.ShutdownToolStripMenuItem.Name = "ShutdownToolStripMenuItem"
-        Me.ShutdownToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ShutdownToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
         Me.ShutdownToolStripMenuItem.Text = "Shutdown"
+        '
+        'RunToolStripMenuItem
+        '
+        Me.RunToolStripMenuItem.Name = "RunToolStripMenuItem"
+        Me.RunToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
+        Me.RunToolStripMenuItem.Text = "Run"
         '
         'Timer1
         '
@@ -172,11 +183,41 @@ Partial Class Desktop
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "HH:MM:SS TT"
         '
-        'RunToolStripMenuItem
+        'ImageList1
         '
-        Me.RunToolStripMenuItem.Name = "RunToolStripMenuItem"
-        Me.RunToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
-        Me.RunToolStripMenuItem.Text = "Run"
+        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
+        Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        '
+        'ListView1
+        '
+        Me.ListView1.BackColor = System.Drawing.Color.DarkCyan
+        Me.ListView1.HideSelection = False
+        Me.ListView1.LargeImageList = Me.ImageList1
+        Me.ListView1.Location = New System.Drawing.Point(12, 12)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(1074, 549)
+        Me.ListView1.SmallImageList = Me.ImageList1
+        Me.ListView1.TabIndex = 2
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        '
+        'InternetExplorerToolStripMenuItem
+        '
+        Me.InternetExplorerToolStripMenuItem.Name = "InternetExplorerToolStripMenuItem"
+        Me.InternetExplorerToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.InternetExplorerToolStripMenuItem.Text = "Internet Explorer"
+        '
+        'MicrosoftEdgeToolStripMenuItem
+        '
+        Me.MicrosoftEdgeToolStripMenuItem.Name = "MicrosoftEdgeToolStripMenuItem"
+        Me.MicrosoftEdgeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MicrosoftEdgeToolStripMenuItem.Text = "Microsoft Edge"
+        '
+        'OperaToolStripMenuItem
+        '
+        Me.OperaToolStripMenuItem.Name = "OperaToolStripMenuItem"
+        Me.OperaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.OperaToolStripMenuItem.Text = "Opera"
         '
         'Desktop
         '
@@ -187,6 +228,7 @@ Partial Class Desktop
         Me.ControlBox = False
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.ListView1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Desktop"
@@ -220,4 +262,9 @@ Partial Class Desktop
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FileExplorerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RunToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ImageList1 As ImageList
+    Friend WithEvents ListView1 As ListView
+    Friend WithEvents InternetExplorerToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MicrosoftEdgeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OperaToolStripMenuItem As ToolStripMenuItem
 End Class
