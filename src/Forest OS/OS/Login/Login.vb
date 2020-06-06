@@ -1,5 +1,6 @@
 Imports System
 Imports System.Security
+Imports System.IO
 Imports ForestOSUtilities
 Imports System.Security.Cryptography
 Imports System.Text
@@ -19,49 +20,30 @@ Public Class Login
 
     Private Sub OK_Click(sender As Object, e As EventArgs) Handles OK.Click
         Try
-            Dim path As String
-            path = "C:\Forest-OS\User\"
             If UsernameTextBox.Text = "" Then
                 ' Error if nothing has been typed in.
                 UsernameLabel.Text = "Error, More than one character required"
-            ElseIf ComboBox1.Text = "" Then
+            ElseIf UserType.Text = "" Then
                 Label1.Text = "Please select an Account type."
-            ElseIf My.Computer.FileSystem.DirectoryExists(path & ComboBox1.Text & "\" & UsernameTextBox.Text.ToString) Then ' Check if the Username entered exist.
+            ElseIf My.Computer.FileSystem.DirectoryExists(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & Usertype.Text & "\" & UsernameTextBox.Text) Then ' Check if the Username entered exist.
                 ' Start login process.
-                Dim USERREAD As System.IO.StreamReader = New System.IO.StreamReader(path & ComboBox1.Text & "\" & UsernameTextBox.Text & "\" & "USERNAME.DLL") ' If Exist, read file contents
-                Dim userline As String
-                Dim PASSREAD As System.IO.StreamReader = New System.IO.StreamReader(path & ComboBox1.Text & "\" & UsernameTextBox.Text & "\" & "PASSWORD.DLL") ' If Exist, read password.
-                Dim passline As String
-                Do
-                    ' Load all security data.
-                    Dim sSourceData As String
-                    Dim tmpSource() As Byte
-                    Dim tmpHash() As Byte
-                    sSourceData = "MySourceData"
-                    'Create a byte array from source data.
-                    tmpSource = ASCIIEncoding.ASCII.GetBytes(sSourceData)
-                    'Compute hash based on source data.
-                    tmpHash = New MD5CryptoServiceProvider().ComputeHash(tmpSource)
-
-
-                    passline = ByteArrayToString(tmpHash)
-                    userline = USERREAD.ReadLine
-                Loop Until userline Is Nothing
-                If passline = PASSREAD.ReadLine() = True Then
-                    UsernameLabel.Text = "You're Logged In"
-                    ServiceStarter.Show()
-                    Me.Close()
-                ElseIf passline = PASSREAD.ReadLine() = True Then
-                    ' Error if no password is entered.
-                    PasswordLabel.Text = "Error, please insert a password"
-                End If
-                If PasswordTextBox.Text = "" Then
-                    ' Error if no password is entered.
-                    PasswordLabel.Text = "Error, please insert a password"
-                ElseIf passline = PASSREAD.ReadLine() = True Then
-                    UsernameLabel.Text = "You're Logged In"
-                    ServiceStarter.Show()
-                    Me.Close()
+                If UsernameTextBox.Text = My.Computer.FileSystem.ReadAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & UsernameTextBox.Text & "\username.dll") Then
+                    Try
+                        Dim cipherText As String = My.Computer.FileSystem.ReadAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & UsernameTextBox.Text & "\password.dll")
+                        Dim password As String = PasswordTextBox.Text
+                        Dim wrapper As New Simple3Des(password)
+                        Dim password_decrypt As String = wrapper.DecryptData(cipherText)
+                        If password_decrypt = PasswordTextBox.Text Then
+                            ServiceStarter.Show()
+                            Me.Close()
+                        ElseIf Not password_decrypt = PasswordTextBox.Text Then
+                            MessageBox.Show("Your password is incorrect. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        End If
+                    Catch ex As Exception
+                        MessageBox.Show("Your password is incorrect. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End Try
+                ElseIf Not UsernameTextBox.Text = My.Computer.FileSystem.ReadAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & UsernameTextBox.Text & "\username.dll") Then
+                    MessageBox.Show("Your Username Does Not Exist, or Match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
             End If
         Catch ex As Exception

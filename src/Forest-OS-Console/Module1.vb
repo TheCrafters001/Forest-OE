@@ -40,7 +40,7 @@ Module Module1
         ElseIf command = "exit" Then
             ExitConsole()
         ElseIf command = "test" Then 'This command is used to test whatever i'm working on.
-            ForestOSUtilities.Simple3Des.TestEncoding()
+            'NoCodeAtTheMoment
             Prompt()
         Else
             Console.WriteLine("The command you have entered '" & command & "' does not exist.")
