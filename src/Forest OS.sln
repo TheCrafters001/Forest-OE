@@ -9,6 +9,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Forest-OS-Console", "Forest
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ForestOSUtilities", "ForestOSUtilities\ForestOSUtilities.vbproj", "{199809DD-80FA-4DFF-8C67-C106B06D6EC2}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Forest-OS-ConsoleUtilities", "Forest-OS-ConsoleUtilities\Forest-OS-ConsoleUtilities.vbproj", "{8B7D32AF-F8F1-4665-BFF4-ED83E3A502EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{199809DD-80FA-4DFF-8C67-C106B06D6EC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{199809DD-80FA-4DFF-8C67-C106B06D6EC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{199809DD-80FA-4DFF-8C67-C106B06D6EC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B7D32AF-F8F1-4665-BFF4-ED83E3A502EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B7D32AF-F8F1-4665-BFF4-ED83E3A502EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B7D32AF-F8F1-4665-BFF4-ED83E3A502EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B7D32AF-F8F1-4665-BFF4-ED83E3A502EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

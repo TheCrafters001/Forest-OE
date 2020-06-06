@@ -7,31 +7,37 @@ Imports System.IO.File
 
 Public Class Class1
     Public Shared Sub CreateUser(ByVal PasswordInput As String, ByVal UsernameInput As String, ByVal Usertype As String)
-        Dim path As String
-        path = "C:\Forest-OS\User\"
-        'If Directory.Exists(path) Then
-        'Console.WriteLine("That path exists already.")
-        'Return
-        'End If
-        MkDir(path & Usertype & "\" & UsernameInput)
-        Dim username As New System.IO.StreamWriter(path & Usertype & "\" & UsernameInput & "\" & "username.dll")
-        username.Write(UsernameInput)
-        username.Close()
+        If Usertype = "Standard" Or Usertype = "Admin" Or Usertype = "Power User" Or Usertype = "Student" Or Usertype = "Teacher" Or Usertype = "Enterprise" Then
+            Dim path As String
+            path = "C:\Forest-OS\User\"
+            'If Directory.Exists(path) Then
+            'Console.WriteLine("That path exists already.")
+            'Return
+            'End If
+            MkDir(path & Usertype & "\" & UsernameInput)
+            Dim username As New System.IO.StreamWriter(path & Usertype & "\" & UsernameInput & "\" & "username.dll")
+            username.Write(UsernameInput)
+            username.Close()
 
-        ' Load all security data.
-        Dim sSourceData As String
-        Dim tmpSource() As Byte
-        Dim tmpHash() As Byte
-        sSourceData = "MySourceData"
-        'Create a byte array from source data.
-        tmpSource = ASCIIEncoding.ASCII.GetBytes(sSourceData)
-        'Compute hash based on source data.
-        tmpHash = New MD5CryptoServiceProvider().ComputeHash(tmpSource)
+            ' Load all security data.
+            Dim sSourceData As String
+            Dim tmpSource() As Byte
+            Dim tmpHash() As Byte
+            sSourceData = "MySourceData"
+            'Create a byte array from source data.
+            tmpSource = ASCIIEncoding.ASCII.GetBytes(sSourceData)
+            'Compute hash based on source data.
+            tmpHash = New MD5CryptoServiceProvider().ComputeHash(tmpSource)
 
 
-        Dim password As New System.IO.StreamWriter(path & Usertype & "\" & UsernameInput & "\" & "password.dll")
-        password.Write(ByteArrayToString(tmpHash))
-        password.Close()
+            Dim password As New System.IO.StreamWriter(path & Usertype & "\" & UsernameInput & "\" & "password.dll")
+            password.Write(ByteArrayToString(tmpHash))
+            password.Close()
+            Console.WriteLine("User Created.")
+        Else
+            Console.WriteLine("The user type you have typed, '" + Usertype + "', does not exist in Forest-OS.")
+            Console.WriteLine("It may be a typo, if so, please check to see if you typed in the user type correctly.")
+        End If
     End Sub
     Public Shared Function ByteArrayToString(ByVal arrInput() As Byte) As String
         Dim i As Integer
