@@ -10,7 +10,8 @@ Public Class Desktop
     End Sub
 
     Private Sub ExitToWindowsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToWindowsToolStripMenuItem.Click
-
+        ExitToWindows.Show()
+        Me.Close()
     End Sub
 
     Private Sub ShutdownToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShutdownToolStripMenuItem.Click
@@ -35,7 +36,17 @@ Public Class Desktop
     End Sub
 
     Private Sub ChromeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChromeToolStripMenuItem.Click
-
+        Try
+            If Not My.Computer.FileSystem.DirectoryExists("C:\Program Files (x86)\Google\Chrome\Application") Then ' 64-bit
+                Process.Start("C:\Program Files\Google\Chrome\Application\chrome.exe")
+            ElseIf Not My.Computer.FileSystem.DirectoryExists("C:\Program Files\Google\Chrome\Application") Then ' 32-bit
+                Process.Start("C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
+            End If
+        Catch ex As Exception
+            CrashScreen.Show()
+            CrashScreen.Label2.Text = "What Caused Crash: Application Launch Event  Failed"
+            CrashScreen.Label5.Text = ex.Message
+        End Try
     End Sub
 
     Private Sub InternetExplorerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InternetExplorerToolStripMenuItem.Click
@@ -50,5 +61,22 @@ Public Class Desktop
             CrashScreen.Label2.Text = "What Caused Crash: Application Launch Event  Failed"
             CrashScreen.Label5.Text = ex.Message
         End Try
+    End Sub
+    Private Sub CommandPromptToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CommandPromptToolStripMenuItem.Click
+        Dim ProgramStarter As New ProcessStartInfo
+        ProgramStarter.FileName = "Forest-OS-Console.exe"
+        ProgramStarter.Arguments = ""
+        ProgramStarter.UseShellExecute = True
+        ProgramStarter.WindowStyle = ProcessWindowStyle.Normal
+        Dim proc As Process = Process.Start(ProgramStarter)
+    End Sub
+
+    Private Sub CMDWindowsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CMDWindowsToolStripMenuItem.Click
+        Dim ProgramStarter As New ProcessStartInfo
+        ProgramStarter.FileName = "cmd.exe"
+        ProgramStarter.Arguments = ""
+        ProgramStarter.UseShellExecute = True
+        ProgramStarter.WindowStyle = ProcessWindowStyle.Normal
+        Dim proc As Process = Process.Start(ProgramStarter)
     End Sub
 End Class

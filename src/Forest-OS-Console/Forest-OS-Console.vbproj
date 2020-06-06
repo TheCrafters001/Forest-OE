@@ -123,6 +123,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="NLog.config" />
     <None Include="packages.config" />
     <None Include="Resources\Forest-OS_Logo.ico" />
   </ItemGroup>

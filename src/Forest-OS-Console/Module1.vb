@@ -30,6 +30,7 @@ Module Module1
             Console.WriteLine("= Help =")
             Console.WriteLine("========")
             Console.WriteLine("help ------ pulls up this menu")
+            Console.WriteLine("clear ----- clears console")
             Console.WriteLine("license --- show the license")
             Console.WriteLine("show w ---- shows warranty info")
             Console.WriteLine("show c ---- shows redistribution info")
@@ -42,6 +43,9 @@ Module Module1
             Console.WriteLine("This is free software, and you are welcome to redistribute it")
             Console.WriteLine("under certain conditions; type `show c' for details.")
             Console.WriteLine("")
+            Prompt()
+        ElseIf command = "clear" Then
+            Console.Clear()
             Prompt()
         ElseIf command = "license" Then
             Console.WriteLine("A progam to help make the Windows Experince better.")

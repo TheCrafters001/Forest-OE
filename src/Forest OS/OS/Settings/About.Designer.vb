@@ -22,10 +22,12 @@ Partial Class About
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(About))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -61,18 +63,27 @@ Partial Class About
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(208, 294)
+        Me.Button1.Location = New System.Drawing.Point(416, 463)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(106, 23)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "Check for Updates"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(-1, 123)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(537, 334)
+        Me.RichTextBox1.TabIndex = 4
+        Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
+        '
         'About
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(326, 329)
+        Me.ClientSize = New System.Drawing.Size(534, 498)
+        Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -94,4 +105,5 @@ Partial Class About
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents RichTextBox1 As RichTextBox
 End Class
