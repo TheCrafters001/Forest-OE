@@ -104,6 +104,10 @@ Public Class ConsoleUtil
         ' DO NOT REMOVE
         '
     End Sub
+    Public Shared Sub ExitConsole()
+
+        ' Ends Session
+    End Sub
 
     Public Shared Sub License()
         Console.WriteLine("A progam to help make the Windows Experince better.")

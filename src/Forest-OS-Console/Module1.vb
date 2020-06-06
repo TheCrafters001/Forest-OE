@@ -37,6 +37,11 @@ Module Module1
         ElseIf command = "userc" Then
             CreateUser()
             Prompt()
+        ElseIf command = "exit" Then
+            ExitConsole()
+        ElseIf command = "test" Then 'This command is used to test whatever i'm working on.
+            ForestOSUtilities.Simple3Des.TestEncoding()
+            Prompt()
         Else
             Console.WriteLine("The command you have entered '" & command & "' does not exist.")
             Console.WriteLine("")
