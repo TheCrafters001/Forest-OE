@@ -35,6 +35,8 @@ Public Class Login
                         Dim password_decrypt As String = wrapper.DecryptData(cipherText)
                         If password_decrypt = PasswordTextBox.Text Then
                             ServiceStarter.Show()
+                            My.Settings.Username = UsernameTextBox.Text
+                            My.Settings.Usertype = UserType.Text
                             Me.Close()
                         ElseIf Not password_decrypt = PasswordTextBox.Text Then
                             MessageBox.Show("Your password is incorrect. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -73,6 +75,7 @@ Public Class Login
     End Sub
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        UserType.SelectedIndex = 1
         My.Computer.Audio.Play(My.Resources.Forest_OS_Startup, AudioPlayMode.Background)
     End Sub
 End Class

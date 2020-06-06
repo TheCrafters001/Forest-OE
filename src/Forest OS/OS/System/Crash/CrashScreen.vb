@@ -20,5 +20,8 @@ Public Class CrashScreen
         For Each form As Form In formsToClose
             form.Close()
         Next
+        My.Settings.Usertype = ""
+        My.Settings.Username = ""
+        My.Settings.Save()
     End Sub
 End Class

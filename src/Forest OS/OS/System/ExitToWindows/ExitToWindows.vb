@@ -15,6 +15,9 @@ Public Class ExitToWindows
             form.Close()
         Next
 
+        My.Settings.Username = ""
+        My.Settings.Usertype = ""
+        My.Settings.Save()
         StartExplorer()
         My.Computer.Audio.Play(My.Resources.Forest_OS_Logout, AudioPlayMode.WaitToComplete)
         End

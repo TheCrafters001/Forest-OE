@@ -42,6 +42,12 @@ Module Module1
         ElseIf command = "test" Then 'This command is used to test whatever i'm working on.
             'NoCodeAtTheMoment
             Prompt()
+        ElseIf command = "cmd" Then
+            WinCMD()
+            Prompt()
+        ElseIf command = "explorer" Then
+            WinExplorer()
+            Prompt()
         Else
             Console.WriteLine("The command you have entered '" & command & "' does not exist.")
             Console.WriteLine("")

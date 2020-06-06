@@ -32,6 +32,9 @@ Public Class Shutdown
             Label1.Text = "Stopping Desktop Services..."
         End If
         If ProgressBar2.Value = 20 Then
+            My.Settings.Usertype = ""
+            My.Settings.Username = ""
+            My.Settings.Save()
             Label1.Text = "Ending User Management Services..."
         End If
         If ProgressBar2.Value = 30 Then

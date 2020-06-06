@@ -38,7 +38,7 @@ Partial Class CreateAccount
         Me.OK = New System.Windows.Forms.Button()
         Me.Cancel = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.UserType = New System.Windows.Forms.ComboBox()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -111,15 +111,15 @@ Partial Class CreateAccount
         Me.Label1.Text = "&Account Type"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'ComboBox1
+        'UserType
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Admin", "Standard", "Power User", "Student", "Teacher", "Enterprise"})
-        Me.ComboBox1.Location = New System.Drawing.Point(174, 123)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(220, 21)
-        Me.ComboBox1.TabIndex = 7
+        Me.UserType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.UserType.FormattingEnabled = True
+        Me.UserType.Items.AddRange(New Object() {"Admin", "Standard", "Power User", "Student", "Teacher", "Enterprise"})
+        Me.UserType.Location = New System.Drawing.Point(174, 123)
+        Me.UserType.Name = "UserType"
+        Me.UserType.Size = New System.Drawing.Size(220, 21)
+        Me.UserType.TabIndex = 7
         '
         'CreateAccount
         '
@@ -128,7 +128,7 @@ Partial Class CreateAccount
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel
         Me.ClientSize = New System.Drawing.Size(401, 192)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.UserType)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Cancel)
         Me.Controls.Add(Me.OK)
@@ -152,5 +152,5 @@ Partial Class CreateAccount
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents UserType As ComboBox
 End Class

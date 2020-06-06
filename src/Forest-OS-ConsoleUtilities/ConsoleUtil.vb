@@ -17,7 +17,7 @@ Public Class ConsoleUtil
         ' This should not be removed, as it contains important information.
         '
     End Sub
-
+#Region "User Management"
     Public Shared Sub CreateUser()
         Console.WriteLine("====================")
         Console.WriteLine("= Create User      =")
@@ -54,13 +54,16 @@ Public Class ConsoleUtil
         Console.WriteLine("Attempted to create user: ")
         Console.WriteLine("Username: " & user & " && Password: ********* && Usertype: " & type)
     End Sub
-
+#End Region
+#Region "Info"
     Public Shared Sub Help()
         Console.WriteLine("========")
         Console.WriteLine("= Help =")
         Console.WriteLine("========")
         Console.WriteLine("help ------ pulls up this menu")
         Console.WriteLine("clear ----- clears console")
+        Console.WriteLine("cmd ------- opens Windows command prompt")
+        Console.WriteLine("explorer -- opens Windows File Explorer, may break Forest-OS.")
         Console.WriteLine("license --- show the license")
         Console.WriteLine("show w ---- shows warranty info")
         Console.WriteLine("show c ---- shows redistribution info")
@@ -104,10 +107,6 @@ Public Class ConsoleUtil
         ' DO NOT REMOVE
         '
     End Sub
-    Public Shared Sub ExitConsole()
-
-        ' Ends Session
-    End Sub
 
     Public Shared Sub License()
         Console.WriteLine("A progam to help make the Windows Experince better.")
@@ -130,4 +129,20 @@ Public Class ConsoleUtil
         ' Display full license. DO NOT REMOVE
         '
     End Sub
+#End Region
+#Region "Misc"
+    Public Shared Sub ExitConsole()
+
+        ' Ends Session
+    End Sub
+    Public Shared Sub WinExplorer()
+        Console.WriteLine("Opening Windows File Explorer....")
+        Console.WriteLine("This May Break Forest-OS")
+        Process.Start("explorer.exe")
+    End Sub
+    Public Shared Sub WinCMD()
+        Console.WriteLine("Opening Windows CMD...")
+        Process.Start("cmd.exe")
+    End Sub
+#End Region
 End Class
