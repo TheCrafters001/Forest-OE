@@ -34,15 +34,18 @@ Public Class Login
                         Dim wrapper As New Simple3Des(password)
                         Dim password_decrypt As String = wrapper.DecryptData(cipherText)
                         If password_decrypt = PasswordTextBox.Text Then
-                            ServiceStarter.Show()
+                            ' Gather settings
+                            Dim Theme As String = System.IO.File.ReadAllLines(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & UsernameTextBox.Text & "\settings.dll")(1)
+                            My.Settings.Theme = Theme
                             My.Settings.Username = UsernameTextBox.Text
                             My.Settings.Usertype = UserType.Text
+                            ServiceStarter.Show()
                             Me.Close()
                         ElseIf Not password_decrypt = PasswordTextBox.Text Then
                             MessageBox.Show("Your password is incorrect. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         End If
                     Catch ex As Exception
-                        MessageBox.Show("Your password is incorrect. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        MessageBox.Show(ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End Try
                 ElseIf Not UsernameTextBox.Text = My.Computer.FileSystem.ReadAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & UsernameTextBox.Text & "\username.dll") Then
                     MessageBox.Show("Your Username Does Not Exist, or Match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
