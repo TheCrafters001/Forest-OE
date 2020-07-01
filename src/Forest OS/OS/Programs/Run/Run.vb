@@ -5,14 +5,17 @@ Public Class Run
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
         Me.DialogResult = System.Windows.Forms.DialogResult.OK
-        Select Case "run"
-            Case "ver"
-                About.Show()
-            Case "shutdown"
-                MessageBox.Show("Shutdown Function coming soon, will just end application.")
-                ExplorerStatusChanger.StartExplorer()
-                End
-        End Select
+        ComboBox1.Text = ComboBox1.Text.ToLower
+        If ComboBox1.Text = "ver" Then
+            About.Show()
+
+        ElseIf ComboBox1.Text = "explorer" Then
+            Explorer.Show()
+        ElseIf ComboBox1.Text = "osset" Then
+            Settings.Show()
+        ElseIf ComboBox1.Text = "delaccount" Then
+            DeleteAccount.Show()
+        End If
         Me.Close()
     End Sub
 

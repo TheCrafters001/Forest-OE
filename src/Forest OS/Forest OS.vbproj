@@ -178,6 +178,12 @@
     <Compile Include="OS\Settings\Settings.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="OS\Settings\UAC\UAC.Designer.vb">
+      <DependentUpon>UAC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Settings\UAC\UAC.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="OS\System\Background.Designer.vb">
       <DependentUpon>Background.vb</DependentUpon>
     </Compile>
@@ -225,6 +231,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="OS\DeleteAccount\DeleteAccount.resx">
+      <DependentUpon>DeleteAccount.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\Login\First Time Setup\Setup_Page2.resx">
       <DependentUpon>Setup_Page2.vb</DependentUpon>
     </EmbeddedResource>
@@ -251,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Settings\Settings.resx">
       <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Settings\UAC\UAC.resx">
+      <DependentUpon>UAC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\System\Background.resx">
       <DependentUpon>Background.vb</DependentUpon>
