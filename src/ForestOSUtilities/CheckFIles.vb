@@ -1,5 +1,11 @@
-﻿Public Class CheckFIles
+﻿Public Class CheckFiles
     Public Shared Sub CheckForFolders()
+        Console.WriteLine("===========================")
+        Console.WriteLine("= Check User For Folders  =")
+        Console.WriteLine("===========================")
+        Console.WriteLine("= This may take a minute  =")
+        Console.WriteLine("= Please Wait...          =")
+        Console.WriteLine("===========================")
         Dim strSystemDir As String = Environment.GetEnvironmentVariable("SystemDrive")
         If Not My.Computer.FileSystem.DirectoryExists(strSystemDir & "\Forest-OS") Then
             MkDir(strSystemDir & "\Forest-OS")
@@ -30,5 +36,11 @@
             MkDir(strSystemDir & "\Forest-OS\User\Enterprise")
             Console.WriteLine("Forest-OS Enterprise Users Folder(s) created.")
         End If
+        Console.WriteLine("===========================")
+        Console.WriteLine("= Check User For Folders  =")
+        Console.WriteLine("===========================")
+        Console.WriteLine("= Check Complete          =")
+        Console.WriteLine("=                         =")
+        Console.WriteLine("===========================")
     End Sub
 End Class

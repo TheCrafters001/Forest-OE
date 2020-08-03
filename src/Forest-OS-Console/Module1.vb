@@ -25,6 +25,9 @@ Module Module1
         ElseIf command = "clear" Then
             Console.Clear()
             Prompt()
+        ElseIf command = "cls" Then
+            Console.Clear()
+            Prompt()
         ElseIf command = "license" Then
             License()
             Prompt()
@@ -47,6 +50,12 @@ Module Module1
             Prompt()
         ElseIf command = "explorer" Then
             WinExplorer()
+            Prompt()
+        ElseIf command = "chkusr" Then
+            chkusr()
+            Prompt()
+        ElseIf command = "title" Then
+            title()
             Prompt()
         Else
             Console.WriteLine("The command you have entered '" & command & "' does not exist.")

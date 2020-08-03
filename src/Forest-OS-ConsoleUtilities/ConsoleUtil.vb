@@ -1,6 +1,6 @@
-﻿Imports ForestOSUtilities
-Public Class ConsoleUtil
+﻿Public Class ConsoleUtil
     Public Shared Sub StartupText()
+        Console.Title = "Forest-OS Console"
         Console.WriteLine("=====================================")
         Console.WriteLine("= Forest-OS Console                 =")
         Console.WriteLine("= Base code by TheCrafters001       =")
@@ -41,7 +41,7 @@ Public Class ConsoleUtil
         Dim type As String = Console.ReadLine()
         Console.WriteLine("")
         Try
-            ForestOSUtilities.Class1.CreateUser(password.ToString, user.ToString, type.ToString)
+            ForestOSUtilities.UserShell.CreateUser(password.ToString, user.ToString, type.ToString)
         Catch ex As Exception
             Console.WriteLine("An error occured.")
             Console.WriteLine(ex)
@@ -61,13 +61,15 @@ Public Class ConsoleUtil
         Console.WriteLine("= Help =")
         Console.WriteLine("========")
         Console.WriteLine("help ------ pulls up this menu")
+        Console.WriteLine("title ----- changes title of console")
         Console.WriteLine("clear ----- clears console")
         Console.WriteLine("cmd ------- opens Windows command prompt")
-        Console.WriteLine("explorer -- opens Windows File Explorer, may break Forest-OS.")
+        Console.WriteLine("explorer -- opens Windows File Explorer, may break Forest-OS")
         Console.WriteLine("license --- show the license")
         Console.WriteLine("show w ---- shows warranty info")
         Console.WriteLine("show c ---- shows redistribution info")
         Console.WriteLine("userc ----- create user")
+        Console.WriteLine("chkusr ---- check user files for missing folders; will not modify any existing files")
         Console.WriteLine("exit ------ closes console")
         Console.WriteLine("")
         '
@@ -130,7 +132,24 @@ Public Class ConsoleUtil
         '
     End Sub
 #End Region
+#Region "File Checker"
+    Public Shared Sub chkusr()
+        ForestOSUtilities.CheckFiles.CheckForFolders()
+    End Sub
+#End Region
 #Region "Misc"
+    Public Shared Sub title()
+        Dim title As String
+        Dim prompt As String
+        Console.WriteLine("")
+        Console.Write("Enter title: ")
+        prompt = Console.ReadLine()
+        title = prompt
+        If title = "" Then
+            title = "Forest-OS Console"
+        End If
+        Console.Title = title
+    End Sub
     Public Shared Sub ExitConsole()
 
         ' Ends Session

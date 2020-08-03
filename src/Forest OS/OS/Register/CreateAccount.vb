@@ -19,19 +19,23 @@ Public Class CreateAccount
     Private Sub OK_Click(sender As Object, e As EventArgs) Handles OK.Click
         Try
             If UserType.Text = "" Then
-                MessageBox.Show("Cannot create user, no user type selected.")
+                MessageBox.Show("Cannot have a blank username!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1)
             ElseIf Not UserType.Text = "" Then
-                Dim username As String = UsernameTextBox.Text
-                Dim password As String = PasswordTextBox.Text
+                If PasswordTextBox.Text = "" Then
+                    MessageBox.Show("Cannot have a blank password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1)
+                ElseIf Not PasswordTextBox.Text = "" Then
+                    Dim username As String = UsernameTextBox.Text
+                    Dim password As String = PasswordTextBox.Text
 
-                Dim wrapper As New Simple3Des(password)
-                Dim cipherText As String = wrapper.EncryptData(username)
+                    Dim wrapper As New Simple3Des(password)
+                    Dim cipherText As String = wrapper.EncryptData(username)
 
-                MkDir(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & username)
-                My.Computer.FileSystem.WriteAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & username & "\username.dll", username, False)
-                My.Computer.FileSystem.WriteAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & username & "\password.dll", cipherText, False)
-                My.Computer.FileSystem.WriteAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & username & "\settings.dll", "Default", False)
-                Me.Close()
+                    MkDir(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & username)
+                    My.Computer.FileSystem.WriteAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & username & "\username.dll", username, False)
+                    My.Computer.FileSystem.WriteAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & username & "\password.dll", cipherText, False)
+                    My.Computer.FileSystem.WriteAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & username & "\settings.dll", "Default", False)
+                    Me.Close()
+                End If
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "An error happened.")

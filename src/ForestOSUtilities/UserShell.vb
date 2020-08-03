@@ -1,7 +1,7 @@
 ﻿Imports System.Security.Cryptography
 Imports System.IO
 
-Public NotInheritable Class Class1
+Public NotInheritable Class UserShell
     Private TripleDes As TripleDESCryptoServiceProvider ' 3DES cryptographic service provider
     Public Shared Sub CreateUser(ByVal PasswordInput As String, ByVal UsernameInput As String, ByVal Usertype As String)
         If Usertype = "Standard" Or Usertype = "Admin" Or Usertype = "Power User" Or Usertype = "Student" Or Usertype = "Teacher" Or Usertype = "Enterprise" Then

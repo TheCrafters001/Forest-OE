@@ -315,6 +315,10 @@
       <Project>{b4fbe369-16d4-496f-88fb-e0817e134bc4}</Project>
       <Name>Forest-OS-Console</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Forest-OS-First-Time-Setup\Forest-OS-First-Time-Setup.vbproj">
+      <Project>{06abfe1a-e09b-4e4b-90e5-14ebd8648294}</Project>
+      <Name>Forest-OS-First-Time-Setup</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ForestOSUtilities\ForestOSUtilities.vbproj">
       <Project>{199809dd-80fa-4dff-8c67-c106b06d6ec2}</Project>
       <Name>ForestOSUtilities</Name>

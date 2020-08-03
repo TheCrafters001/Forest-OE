@@ -4,32 +4,35 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{199809DD-80FA-4DFF-8C67-C106B06D6EC2}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>ForestOSUtilities</RootNamespace>
-    <AssemblyName>ForestOSUtilities</AssemblyName>
+    <ProjectGuid>{06ABFE1A-E09B-4E4B-90E5-14EBD8648294}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Forest_OS_First_Time_Setup.My.MyApplication</StartupObject>
+    <RootNamespace>Forest_OS_First_Time_Setup</RootNamespace>
+    <AssemblyName>Forest-OS First Time Setup</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>Windows</MyType>
+    <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>ForestOSUtilities.xml</DocumentationFile>
+    <DocumentationFile>Forest-OS First Time Setup.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>ForestOSUtilities.xml</DocumentationFile>
+    <DocumentationFile>Forest-OS First Time Setup.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -45,14 +48,14 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>ForestOSUtilites.snk</AssemblyOriginatorKeyFile>
+    <ApplicationIcon>Resources\Forest-OS_Logo_NoText.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -65,15 +68,21 @@
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CheckFiles.vb" />
-    <Compile Include="UserShell.vb" />
-    <Compile Include="ExplorerStatusChanger.vb" />
+    <Compile Include="Setup Pages\Setup_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup Pages\Setup_1.Designer.vb">
+      <DependentUpon>Setup_1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -90,7 +99,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Security.vb" />
+    <Compile Include="Setup Pages\Setup_2.Designer.vb">
+      <DependentUpon>Setup_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setup Pages\Setup_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup Pages\Setup_3.Designer.vb">
+      <DependentUpon>Setup_3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setup Pages\Setup_3.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -99,9 +119,17 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Setup Pages\Setup_1.resx">
+      <DependentUpon>Setup_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup Pages\Setup_2.resx">
+      <DependentUpon>Setup_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup Pages\Setup_3.resx">
+      <DependentUpon>Setup_3.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ForestOSUtilites.snk" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -111,6 +139,40 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forest-OS_Logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forest-OS_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forest-OS_Logo_NoText.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forest-OS_Logo_NoText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Poweroff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Setup_Large.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Setup_Small.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ForestOSUtilities\ForestOSUtilities.vbproj">
+      <Project>{199809dd-80fa-4dff-8c67-c106b06d6ec2}</Project>
+      <Name>ForestOSUtilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
