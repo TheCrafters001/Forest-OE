@@ -1,14 +1,12 @@
-﻿Imports ForestOSUtilities
-
-Public Class Shutdown
-    Private Sub Shutdown_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+﻿Public Class Logout
+    Private Sub Logout_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         My.Computer.Audio.Play(My.Resources.Forest_OS_Shutdown, AudioPlayMode.Background)
         ProgressBar1.Style = ProgressBarStyle.Marquee
         ProgressBar1.MarqueeAnimationSpeed = 50
         Timer1.Start()
         'Close All Applications of Forest-OS
         Dim remainOpenForms As New HashSet(Of String)
-        remainOpenForms.Add("Shutdown")
+        remainOpenForms.Add("Logout")
         remainOpenForms.Add("Background")
 
         ' Create collection of forms to be closed
@@ -25,7 +23,7 @@ Public Class Shutdown
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         ProgressBar2.Increment(2)
         If ProgressBar2.Value = 4 Then
-            Me.Text = "Shutting Down..."
+            Me.Text = "Logging off..."
             Label1.Text = "Logging Off..."
         End If
         If ProgressBar2.Value = 10 Then
@@ -38,11 +36,11 @@ Public Class Shutdown
             Label1.Text = "Ending User Management Services..."
         End If
         If ProgressBar2.Value = 30 Then
-            Label1.Text = "Shutting Down..."
+            Label1.Text = "Preparing to Logoff Windows..."
         End If
         If ProgressBar2.Value = 100 Then
-            ForestOSUtilities.ExplorerStatusChanger.Shutdown()
-            End
+            Label1.Text = "Logging out..."
+            ForestOSUtilities.ExplorerStatusChanger.Logout()
         End If
     End Sub
 End Class

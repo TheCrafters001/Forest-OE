@@ -24,20 +24,20 @@ Partial Class Desktop
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Desktop))
-        Dim ListViewGroup5 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Web Browsers", System.Windows.Forms.HorizontalAlignment.Left)
-        Dim ListViewGroup6 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Settings", System.Windows.Forms.HorizontalAlignment.Left)
-        Dim ListViewGroup7 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Help", System.Windows.Forms.HorizontalAlignment.Left)
-        Dim ListViewGroup8 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Advanced Users", System.Windows.Forms.HorizontalAlignment.Left)
-        Dim ListViewItem11 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Internet Explorer", 3)
-        Dim ListViewItem12 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Google Chrome", 0)
-        Dim ListViewItem13 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Mozilla Firefox", 2)
-        Dim ListViewItem14 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Microsoft Edge", 1)
-        Dim ListViewItem15 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Settings", 4)
-        Dim ListViewItem16 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("About", 46)
-        Dim ListViewItem17 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Create a new User", 5)
-        Dim ListViewItem18 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Help", 47)
-        Dim ListViewItem19 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("CMD (Forest)", 4)
-        Dim ListViewItem20 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("CMD (Windows)", 49)
+        Dim ListViewGroup1 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Web Browsers", System.Windows.Forms.HorizontalAlignment.Left)
+        Dim ListViewGroup2 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Settings", System.Windows.Forms.HorizontalAlignment.Left)
+        Dim ListViewGroup3 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Help", System.Windows.Forms.HorizontalAlignment.Left)
+        Dim ListViewGroup4 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Advanced Users", System.Windows.Forms.HorizontalAlignment.Left)
+        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Internet Explorer", 3)
+        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Google Chrome", 0)
+        Dim ListViewItem3 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Mozilla Firefox", 2)
+        Dim ListViewItem4 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Microsoft Edge", 1)
+        Dim ListViewItem5 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Settings", 4)
+        Dim ListViewItem6 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("About", 46)
+        Dim ListViewItem7 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Create a new User", 5)
+        Dim ListViewItem8 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Help", 47)
+        Dim ListViewItem9 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("CMD (Forest)", 4)
+        Dim ListViewItem10 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("CMD (Windows)", 49)
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.TestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProgramsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -49,21 +49,19 @@ Partial Class Desktop
         Me.OperaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PowerUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PowershellToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CMDWindowsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CommandPromptToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WinverToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FileExplorerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitToWindowsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShutdownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RunToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.CMDWindowsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -79,7 +77,7 @@ Partial Class Desktop
         '
         'TestToolStripMenuItem
         '
-        Me.TestToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProgramsToolStripMenuItem, Me.SettingsToolStripMenuItem, Me.AboutToolStripMenuItem, Me.ToolStripSeparator1, Me.LogoutToolStripMenuItem, Me.ExitToWindowsToolStripMenuItem, Me.ShutdownToolStripMenuItem})
+        Me.TestToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProgramsToolStripMenuItem, Me.SettingsToolStripMenuItem, Me.AboutToolStripMenuItem, Me.ToolStripSeparator1, Me.ShutdownToolStripMenuItem})
         Me.TestToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.menu_40px
         Me.TestToolStripMenuItem.Name = "TestToolStripMenuItem"
         Me.TestToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -98,7 +96,7 @@ Partial Class Desktop
         Me.InternetToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChromeToolStripMenuItem, Me.FirefoxToolStripMenuItem, Me.InternetExplorerToolStripMenuItem, Me.MicrosoftEdgeToolStripMenuItem, Me.OperaToolStripMenuItem})
         Me.InternetToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.internet_explorer_9_11_256x256
         Me.InternetToolStripMenuItem.Name = "InternetToolStripMenuItem"
-        Me.InternetToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.InternetToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.InternetToolStripMenuItem.Text = "Internet"
         '
         'ChromeToolStripMenuItem
@@ -139,32 +137,38 @@ Partial Class Desktop
         '
         Me.PowerUserToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PowershellToolStripMenuItem, Me.CMDWindowsToolStripMenuItem, Me.CommandPromptToolStripMenuItem, Me.WinverToolStripMenuItem})
         Me.PowerUserToolStripMenuItem.Name = "PowerUserToolStripMenuItem"
-        Me.PowerUserToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PowerUserToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.PowerUserToolStripMenuItem.Text = "Power User"
         '
         'PowershellToolStripMenuItem
         '
         Me.PowershellToolStripMenuItem.Name = "PowershellToolStripMenuItem"
-        Me.PowershellToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PowershellToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
         Me.PowershellToolStripMenuItem.Text = "Powershell"
+        '
+        'CMDWindowsToolStripMenuItem
+        '
+        Me.CMDWindowsToolStripMenuItem.Name = "CMDWindowsToolStripMenuItem"
+        Me.CMDWindowsToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.CMDWindowsToolStripMenuItem.Text = "CMD (Windows)"
         '
         'CommandPromptToolStripMenuItem
         '
         Me.CommandPromptToolStripMenuItem.Name = "CommandPromptToolStripMenuItem"
-        Me.CommandPromptToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CommandPromptToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
         Me.CommandPromptToolStripMenuItem.Text = "Command Prompt"
         '
         'WinverToolStripMenuItem
         '
         Me.WinverToolStripMenuItem.Name = "WinverToolStripMenuItem"
-        Me.WinverToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.WinverToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
         Me.WinverToolStripMenuItem.Text = "winver"
         '
         'FileExplorerToolStripMenuItem
         '
         Me.FileExplorerToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.full_image_40px
         Me.FileExplorerToolStripMenuItem.Name = "FileExplorerToolStripMenuItem"
-        Me.FileExplorerToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FileExplorerToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.FileExplorerToolStripMenuItem.Text = "File Explorer"
         '
         'SettingsToolStripMenuItem
@@ -186,26 +190,12 @@ Partial Class Desktop
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(177, 6)
         '
-        'LogoutToolStripMenuItem
-        '
-        Me.LogoutToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.exit_40px
-        Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.LogoutToolStripMenuItem.Text = "Logout"
-        '
-        'ExitToWindowsToolStripMenuItem
-        '
-        Me.ExitToWindowsToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.windows8_40px
-        Me.ExitToWindowsToolStripMenuItem.Name = "ExitToWindowsToolStripMenuItem"
-        Me.ExitToWindowsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ExitToWindowsToolStripMenuItem.Text = "Exit to Windows"
-        '
         'ShutdownToolStripMenuItem
         '
         Me.ShutdownToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.close_window_40px
         Me.ShutdownToolStripMenuItem.Name = "ShutdownToolStripMenuItem"
         Me.ShutdownToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ShutdownToolStripMenuItem.Text = "Shutdown"
+        Me.ShutdownToolStripMenuItem.Text = "Shutdown..."
         '
         'RunToolStripMenuItem
         '
@@ -363,27 +353,27 @@ Partial Class Desktop
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ListView1.BackColor = System.Drawing.Color.DarkCyan
-        ListViewGroup5.Header = "Web Browsers"
-        ListViewGroup5.Name = "Web Browsers"
-        ListViewGroup6.Header = "Settings"
-        ListViewGroup6.Name = "Settings"
-        ListViewGroup7.Header = "Help"
-        ListViewGroup7.Name = "Help"
-        ListViewGroup8.Header = "Advanced Users"
-        ListViewGroup8.Name = "Advanced"
-        Me.ListView1.Groups.AddRange(New System.Windows.Forms.ListViewGroup() {ListViewGroup5, ListViewGroup6, ListViewGroup7, ListViewGroup8})
+        ListViewGroup1.Header = "Web Browsers"
+        ListViewGroup1.Name = "Web Browsers"
+        ListViewGroup2.Header = "Settings"
+        ListViewGroup2.Name = "Settings"
+        ListViewGroup3.Header = "Help"
+        ListViewGroup3.Name = "Help"
+        ListViewGroup4.Header = "Advanced Users"
+        ListViewGroup4.Name = "Advanced"
+        Me.ListView1.Groups.AddRange(New System.Windows.Forms.ListViewGroup() {ListViewGroup1, ListViewGroup2, ListViewGroup3, ListViewGroup4})
         Me.ListView1.HideSelection = False
-        ListViewItem11.Group = ListViewGroup5
-        ListViewItem12.Group = ListViewGroup5
-        ListViewItem13.Group = ListViewGroup5
-        ListViewItem14.Group = ListViewGroup5
-        ListViewItem15.Group = ListViewGroup6
-        ListViewItem16.Group = ListViewGroup6
-        ListViewItem17.Group = ListViewGroup6
-        ListViewItem18.Group = ListViewGroup7
-        ListViewItem19.Group = ListViewGroup8
-        ListViewItem20.Group = ListViewGroup8
-        Me.ListView1.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem11, ListViewItem12, ListViewItem13, ListViewItem14, ListViewItem15, ListViewItem16, ListViewItem17, ListViewItem18, ListViewItem19, ListViewItem20})
+        ListViewItem1.Group = ListViewGroup1
+        ListViewItem2.Group = ListViewGroup1
+        ListViewItem3.Group = ListViewGroup1
+        ListViewItem4.Group = ListViewGroup1
+        ListViewItem5.Group = ListViewGroup2
+        ListViewItem6.Group = ListViewGroup2
+        ListViewItem7.Group = ListViewGroup2
+        ListViewItem8.Group = ListViewGroup3
+        ListViewItem9.Group = ListViewGroup4
+        ListViewItem10.Group = ListViewGroup4
+        Me.ListView1.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2, ListViewItem3, ListViewItem4, ListViewItem5, ListViewItem6, ListViewItem7, ListViewItem8, ListViewItem9, ListViewItem10})
         Me.ListView1.LargeImageList = Me.ImageList1
         Me.ListView1.Location = New System.Drawing.Point(12, 12)
         Me.ListView1.Name = "ListView1"
@@ -391,12 +381,6 @@ Partial Class Desktop
         Me.ListView1.SmallImageList = Me.ImageList1
         Me.ListView1.TabIndex = 2
         Me.ListView1.UseCompatibleStateImageBehavior = False
-        '
-        'CMDWindowsToolStripMenuItem
-        '
-        Me.CMDWindowsToolStripMenuItem.Name = "CMDWindowsToolStripMenuItem"
-        Me.CMDWindowsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.CMDWindowsToolStripMenuItem.Text = "CMD (Windows)"
         '
         'Desktop
         '
@@ -425,10 +409,8 @@ Partial Class Desktop
     Friend WithEvents Timer1 As Timer
     Friend WithEvents TestToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ShutdownToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label1 As Label
-    Friend WithEvents ExitToWindowsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProgramsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InternetToolStripMenuItem As ToolStripMenuItem

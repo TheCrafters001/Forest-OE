@@ -9,14 +9,9 @@ Public Class Desktop
         Label1.Text = TimeOfDay.ToString("h:mm:ss tt")
     End Sub
 
-    Private Sub ExitToWindowsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToWindowsToolStripMenuItem.Click
-        ExitToWindows.Show()
-        Me.Close()
-    End Sub
-
     Private Sub ShutdownToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShutdownToolStripMenuItem.Click
-        Shutdown.Show()
-        Me.Close()
+        ShutdownDialog.Show()
+
     End Sub
 
     Private Sub SettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SettingsToolStripMenuItem.Click

@@ -208,6 +208,18 @@
     <Compile Include="OS\System\Login_System\ServiceStarter.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="OS\System\Logout\Logout.Designer.vb">
+      <DependentUpon>Logout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OS\System\Logout\Logout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OS\System\Restart\Restart.Designer.vb">
+      <DependentUpon>Restart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OS\System\Restart\Restart.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="OS\System\Shutdown\Shutdown.Designer.vb">
       <DependentUpon>Shutdown.vb</DependentUpon>
     </Compile>
@@ -218,6 +230,12 @@
       <DependentUpon>Desktop.vb</DependentUpon>
     </Compile>
     <Compile Include="OS\Desktop\Desktop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OS\System\Shutdown\ShutdownDialog.Designer.vb">
+      <DependentUpon>ShutdownDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OS\System\Shutdown\ShutdownDialog.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -276,11 +294,20 @@
     <EmbeddedResource Include="OS\System\Login_System\ServiceStarter.resx">
       <DependentUpon>ServiceStarter.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OS\System\Logout\Logout.resx">
+      <DependentUpon>Logout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\System\Restart\Restart.resx">
+      <DependentUpon>Restart.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\System\Shutdown\Shutdown.resx">
       <DependentUpon>Shutdown.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Desktop\Desktop.resx">
       <DependentUpon>Desktop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\System\Shutdown\ShutdownDialog.resx">
+      <DependentUpon>ShutdownDialog.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -324,9 +351,7 @@
       <Name>ForestOSUtilities</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="OS\System\Logout\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Logout.png" />
   </ItemGroup>

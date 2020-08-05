@@ -10,4 +10,14 @@
     Public Shared Sub StartExplorer()
         Shell(String.Concat(System.Environment.GetFolderPath(Environment.SpecialFolder.Windows), "\explorer.exe"))
     End Sub
+    Public Shared Sub Shutdown()
+        Process.Start("shutdown.exe", "/s")
+    End Sub
+    Public Shared Sub Logout()
+        Process.Start("shutdown.exe", "/l")
+    End Sub
+    Public Shared Sub Restart()
+        Process.Start("shutdown.exe", "/r")
+    End Sub
+
 End Class

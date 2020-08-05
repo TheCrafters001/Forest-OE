@@ -35,8 +35,8 @@ Public Class Login
                         Dim password_decrypt As String = wrapper.DecryptData(cipherText)
                         If password_decrypt = PasswordTextBox.Text Then
                             ' Gather settings
-                            Dim Theme As String = System.IO.File.ReadAllLines(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & UsernameTextBox.Text & "\settings.dll")(1)
-                            My.Settings.Theme = Theme
+                            'Dim Theme As String = System.IO.File.ReadAllLines(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & UsernameTextBox.Text & "\settings.dll")(1)
+                            'My.Settings.Theme = Theme
                             My.Settings.Username = UsernameTextBox.Text
                             My.Settings.Usertype = UserType.Text
                             ServiceStarter.Show()
