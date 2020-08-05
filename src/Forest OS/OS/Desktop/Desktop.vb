@@ -6,7 +6,7 @@ Public Class Desktop
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Label1.Text = TimeOfDay.ToString("h:mm:ss tt")
+        Time_lbl.Text = TimeOfDay.ToString("h:mm:ss tt")
     End Sub
 
     Private Sub ShutdownToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShutdownToolStripMenuItem.Click
@@ -73,5 +73,9 @@ Public Class Desktop
         ProgramStarter.UseShellExecute = True
         ProgramStarter.WindowStyle = ProcessWindowStyle.Normal
         Dim proc As Process = Process.Start(ProgramStarter)
+    End Sub
+
+    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs)
+
     End Sub
 End Class

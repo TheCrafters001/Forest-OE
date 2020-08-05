@@ -24,20 +24,6 @@ Partial Class Desktop
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Desktop))
-        Dim ListViewGroup1 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Web Browsers", System.Windows.Forms.HorizontalAlignment.Left)
-        Dim ListViewGroup2 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Settings", System.Windows.Forms.HorizontalAlignment.Left)
-        Dim ListViewGroup3 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Help", System.Windows.Forms.HorizontalAlignment.Left)
-        Dim ListViewGroup4 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Advanced Users", System.Windows.Forms.HorizontalAlignment.Left)
-        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Internet Explorer", 3)
-        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Google Chrome", 0)
-        Dim ListViewItem3 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Mozilla Firefox", 2)
-        Dim ListViewItem4 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Microsoft Edge", 1)
-        Dim ListViewItem5 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Settings", 4)
-        Dim ListViewItem6 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("About", 46)
-        Dim ListViewItem7 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Create a new User", 5)
-        Dim ListViewItem8 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Help", 47)
-        Dim ListViewItem9 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("CMD (Forest)", 4)
-        Dim ListViewItem10 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("CMD (Windows)", 49)
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.TestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProgramsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -59,19 +45,21 @@ Partial Class Desktop
         Me.ShutdownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RunToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Time_lbl = New System.Windows.Forms.Label()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.quickLaunch_btn = New System.Windows.Forms.Button()
+        Me.quickLaunch_grp = New System.Windows.Forms.GroupBox()
         Me.MenuStrip1.SuspendLayout()
+        Me.quickLaunch_grp.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TestToolStripMenuItem, Me.RunToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 577)
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 576)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1098, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1100, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -88,7 +76,7 @@ Partial Class Desktop
         '
         Me.ProgramsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InternetToolStripMenuItem, Me.PowerUserToolStripMenuItem, Me.FileExplorerToolStripMenuItem})
         Me.ProgramsToolStripMenuItem.Name = "ProgramsToolStripMenuItem"
-        Me.ProgramsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ProgramsToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
         Me.ProgramsToolStripMenuItem.Text = "Programs"
         '
         'InternetToolStripMenuItem
@@ -175,26 +163,26 @@ Partial Class Desktop
         '
         Me.SettingsToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.icons8_settings_64
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
         Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.info_popup_40px
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(134, 6)
         '
         'ShutdownToolStripMenuItem
         '
         Me.ShutdownToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.close_window_40px
         Me.ShutdownToolStripMenuItem.Name = "ShutdownToolStripMenuItem"
-        Me.ShutdownToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ShutdownToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
         Me.ShutdownToolStripMenuItem.Text = "Shutdown..."
         '
         'RunToolStripMenuItem
@@ -206,15 +194,15 @@ Partial Class Desktop
         'Timer1
         '
         '
-        'Label1
+        'Time_lbl
         '
-        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(1020, 564)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(78, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "HH:MM:SS TT"
+        Me.Time_lbl.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Time_lbl.AutoSize = True
+        Me.Time_lbl.Location = New System.Drawing.Point(1022, 563)
+        Me.Time_lbl.Name = "Time_lbl"
+        Me.Time_lbl.Size = New System.Drawing.Size(78, 13)
+        Me.Time_lbl.TabIndex = 1
+        Me.Time_lbl.Text = "HH:MM:SS TT"
         '
         'ImageList1
         '
@@ -347,51 +335,39 @@ Partial Class Desktop
         Me.ImageList1.Images.SetKeyName(124, "zoom_in_40px.png")
         Me.ImageList1.Images.SetKeyName(125, "zoom_out_40px.png")
         '
-        'ListView1
+        'quickLaunch_btn
         '
-        Me.ListView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ListView1.BackColor = System.Drawing.Color.DarkCyan
-        ListViewGroup1.Header = "Web Browsers"
-        ListViewGroup1.Name = "Web Browsers"
-        ListViewGroup2.Header = "Settings"
-        ListViewGroup2.Name = "Settings"
-        ListViewGroup3.Header = "Help"
-        ListViewGroup3.Name = "Help"
-        ListViewGroup4.Header = "Advanced Users"
-        ListViewGroup4.Name = "Advanced"
-        Me.ListView1.Groups.AddRange(New System.Windows.Forms.ListViewGroup() {ListViewGroup1, ListViewGroup2, ListViewGroup3, ListViewGroup4})
-        Me.ListView1.HideSelection = False
-        ListViewItem1.Group = ListViewGroup1
-        ListViewItem2.Group = ListViewGroup1
-        ListViewItem3.Group = ListViewGroup1
-        ListViewItem4.Group = ListViewGroup1
-        ListViewItem5.Group = ListViewGroup2
-        ListViewItem6.Group = ListViewGroup2
-        ListViewItem7.Group = ListViewGroup2
-        ListViewItem8.Group = ListViewGroup3
-        ListViewItem9.Group = ListViewGroup4
-        ListViewItem10.Group = ListViewGroup4
-        Me.ListView1.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2, ListViewItem3, ListViewItem4, ListViewItem5, ListViewItem6, ListViewItem7, ListViewItem8, ListViewItem9, ListViewItem10})
-        Me.ListView1.LargeImageList = Me.ImageList1
-        Me.ListView1.Location = New System.Drawing.Point(12, 12)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(1074, 549)
-        Me.ListView1.SmallImageList = Me.ImageList1
-        Me.ListView1.TabIndex = 2
-        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.quickLaunch_btn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.quickLaunch_btn.Location = New System.Drawing.Point(6, 533)
+        Me.quickLaunch_btn.Name = "quickLaunch_btn"
+        Me.quickLaunch_btn.Size = New System.Drawing.Size(145, 23)
+        Me.quickLaunch_btn.TabIndex = 3
+        Me.quickLaunch_btn.Text = "Launch"
+        Me.quickLaunch_btn.UseVisualStyleBackColor = True
+        '
+        'quickLaunch_grp
+        '
+        Me.quickLaunch_grp.BackColor = System.Drawing.Color.Transparent
+        Me.quickLaunch_grp.Controls.Add(Me.quickLaunch_btn)
+        Me.quickLaunch_grp.Location = New System.Drawing.Point(12, 12)
+        Me.quickLaunch_grp.Name = "quickLaunch_grp"
+        Me.quickLaunch_grp.Size = New System.Drawing.Size(157, 562)
+        Me.quickLaunch_grp.TabIndex = 4
+        Me.quickLaunch_grp.TabStop = False
+        Me.quickLaunch_grp.Text = "Quick Launch"
         '
         'Desktop
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkCyan
-        Me.ClientSize = New System.Drawing.Size(1098, 601)
+        Me.BackgroundImage = Global.Forest_OS.My.Resources.Resources.Wallpaper
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ClientSize = New System.Drawing.Size(1100, 600)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.quickLaunch_grp)
+        Me.Controls.Add(Me.Time_lbl)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.ListView1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Desktop"
@@ -400,6 +376,7 @@ Partial Class Desktop
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.quickLaunch_grp.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -410,7 +387,7 @@ Partial Class Desktop
     Friend WithEvents TestToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ShutdownToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Label1 As Label
+    Friend WithEvents Time_lbl As Label
     Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProgramsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InternetToolStripMenuItem As ToolStripMenuItem
@@ -424,9 +401,10 @@ Partial Class Desktop
     Friend WithEvents FileExplorerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RunToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ImageList1 As ImageList
-    Friend WithEvents ListView1 As ListView
     Friend WithEvents InternetExplorerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MicrosoftEdgeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OperaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CMDWindowsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents quickLaunch_btn As Button
+    Friend WithEvents quickLaunch_grp As GroupBox
 End Class
