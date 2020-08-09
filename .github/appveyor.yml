@@ -4,9 +4,9 @@ configuration:
 - Debug
 - Release
 platform: Any CPU
-clone_folder: C:\TheCrafters001\Build\Forest-OS\src\bin
+clone_folder: C:\TheCrafters001\Build\Forest-OE\src\bin
 before_build:
-- ps: nuget restore 'C:\TheCrafters001\Build\Forest-OS\src\bin\src\Forest OS.sln'
+- ps: nuget restore 'C:\TheCrafters001\Build\Forest-OS\src\bin\src\Forest OE.sln'
 build:
-  project: src\Forest OS.sln
+  project: src\Forest OE.sln
   verbosity: minimal
