@@ -299,20 +299,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Forest-OE-Console\Forest-OE-Console.vbproj">
-      <Project>{b4fbe369-16d4-496f-88fb-e0817e134bc4}</Project>
-      <Name>Forest-OS-Console</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Forest-OE-First-Time-Setup\Forest-OE-First-Time-Setup.vbproj">
-      <Project>{06abfe1a-e09b-4e4b-90e5-14ebd8648294}</Project>
-      <Name>Forest-OS-First-Time-Setup</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ForestOEUtilities\ForestOEUtilities.vbproj">
-      <Project>{199809dd-80fa-4dff-8c67-c106b06d6ec2}</Project>
-      <Name>ForestOSUtilities</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Wallpaper.png" />
   </ItemGroup>
   <ItemGroup>
@@ -746,6 +732,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Forest-OE_Logo_NoText.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Forest-OE-Console\Forest-OE-Console.vbproj">
+      <Project>{b4fbe369-16d4-496f-88fb-e0817e134bc4}</Project>
+      <Name>Forest-OE-Console</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Forest-OE-First-Time-Setup\Forest-OE-First-Time-Setup.vbproj">
+      <Project>{06abfe1a-e09b-4e4b-90e5-14ebd8648294}</Project>
+      <Name>Forest-OE-First-Time-Setup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForestOEUtilities\ForestOEUtilities.vbproj">
+      <Project>{199809dd-80fa-4dff-8c67-c106b06d6ec2}</Project>
+      <Name>ForestOEUtilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
