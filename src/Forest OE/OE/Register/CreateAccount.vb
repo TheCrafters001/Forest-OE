@@ -30,10 +30,10 @@ Public Class CreateAccount
                     Dim wrapper As New Simple3Des(password)
                     Dim cipherText As String = wrapper.EncryptData(username)
 
-                    MkDir(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & username)
-                    My.Computer.FileSystem.WriteAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & username & "\username.dll", username, False)
-                    My.Computer.FileSystem.WriteAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & username & "\password.dll", cipherText, False)
-                    My.Computer.FileSystem.WriteAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & username & "\settings.dll", "Default", False)
+                    MkDir(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OE\User\" & UserType.Text & "\" & username)
+                    My.Computer.FileSystem.WriteAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OE\User\" & UserType.Text & "\" & username & "\username.dll", username, False)
+                    My.Computer.FileSystem.WriteAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OE\User\" & UserType.Text & "\" & username & "\password.dll", cipherText, False)
+                    My.Computer.FileSystem.WriteAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OE\User\" & UserType.Text & "\" & username & "\settings.dll", "Default", False)
                     Me.Close()
                 End If
             End If

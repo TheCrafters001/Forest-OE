@@ -56,7 +56,6 @@ Partial Class Desktop
         'MenuStrip1
         '
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TestToolStripMenuItem, Me.RunToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 576)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1100, 24)
@@ -65,7 +64,6 @@ Partial Class Desktop
         '
         'TestToolStripMenuItem
         '
-        Me.TestToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProgramsToolStripMenuItem, Me.SettingsToolStripMenuItem, Me.AboutToolStripMenuItem, Me.ToolStripSeparator1, Me.ShutdownToolStripMenuItem})
         Me.TestToolStripMenuItem.Image = Global.Forest_OE.My.Resources.Resources.menu_40px
         Me.TestToolStripMenuItem.Name = "TestToolStripMenuItem"
         Me.TestToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -198,6 +196,7 @@ Partial Class Desktop
         '
         Me.Time_lbl.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Time_lbl.AutoSize = True
+        Me.Time_lbl.ForeColor = System.Drawing.Color.White
         Me.Time_lbl.Location = New System.Drawing.Point(1022, 563)
         Me.Time_lbl.Name = "Time_lbl"
         Me.Time_lbl.Size = New System.Drawing.Size(78, 13)

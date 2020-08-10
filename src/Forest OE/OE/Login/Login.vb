@@ -33,17 +33,17 @@ Public Class Login
                 UsernameLabel.Text = "Error, More than one character required"
             ElseIf UserType.Text = "" Then
                 Label1.Text = "Please select an Account type."
-            ElseIf My.Computer.FileSystem.DirectoryExists(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & Usertype.Text & "\" & UsernameTextBox.Text) Then ' Check if the Username entered exist.
+            ElseIf My.Computer.FileSystem.DirectoryExists(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OE\User\" & Usertype.Text & "\" & UsernameTextBox.Text) Then ' Check if the Username entered exist.
                 ' Start login process.
-                If UsernameTextBox.Text = My.Computer.FileSystem.ReadAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & UsernameTextBox.Text & "\username.dll") Then
+                If UsernameTextBox.Text = My.Computer.FileSystem.ReadAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OE\User\" & UserType.Text & "\" & UsernameTextBox.Text & "\username.dll") Then
                     Try
-                        Dim cipherText As String = My.Computer.FileSystem.ReadAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & UsernameTextBox.Text & "\password.dll")
+                        Dim cipherText As String = My.Computer.FileSystem.ReadAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OE\User\" & UserType.Text & "\" & UsernameTextBox.Text & "\password.dll")
                         Dim password As String = PasswordTextBox.Text
                         Dim wrapper As New Simple3Des(password)
                         Dim password_decrypt As String = wrapper.DecryptData(cipherText)
                         If password_decrypt = PasswordTextBox.Text Then
                             ' Gather settings
-                            'Dim Theme As String = System.IO.File.ReadAllLines(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & UsernameTextBox.Text & "\settings.dll")(1)
+                            'Dim Theme As String = System.IO.File.ReadAllLines(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OE\User\" & UserType.Text & "\" & UsernameTextBox.Text & "\settings.dll")(1)
                             'My.Settings.Theme = Theme
                             My.Settings.Username = UsernameTextBox.Text
                             My.Settings.Usertype = UserType.Text
@@ -55,7 +55,7 @@ Public Class Login
                     Catch ex As Exception
                         MessageBox.Show(ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End Try
-                ElseIf Not UsernameTextBox.Text = My.Computer.FileSystem.ReadAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OS\User\" & UserType.Text & "\" & UsernameTextBox.Text & "\username.dll") Then
+                ElseIf Not UsernameTextBox.Text = My.Computer.FileSystem.ReadAllText(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OE\User\" & UserType.Text & "\" & UsernameTextBox.Text & "\username.dll") Then
                     MessageBox.Show("Your Username Does Not Exist, or Match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
             End If

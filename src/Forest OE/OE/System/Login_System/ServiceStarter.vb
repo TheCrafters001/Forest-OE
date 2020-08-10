@@ -1,7 +1,5 @@
 ﻿Public Class ServiceStarter
     Private Sub ServiceStarter_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ProgressBar1.Style = ProgressBarStyle.Marquee
-        ProgressBar1.MarqueeAnimationSpeed = 50
         Timer1.Start()
     End Sub
 

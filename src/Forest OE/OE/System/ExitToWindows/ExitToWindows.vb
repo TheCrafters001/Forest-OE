@@ -26,7 +26,7 @@ Public Class ExitToWindows
             Label1.Text = "Preparing to logout..."
         End If
         If ProgressBar2.Value = 10 Then
-            Label1.Text = "Logging out of Forest-OS..."
+            Label1.Text = "Logging out of Forest-OE..."
             My.Settings.Username = ""
             My.Settings.Usertype = ""
             My.Settings.Save()
@@ -36,7 +36,7 @@ Public Class ExitToWindows
             My.Computer.Audio.Play(My.Resources.Forest_OS_Logout, AudioPlayMode.WaitToComplete)
         End If
         If ProgressBar2.Value = 20 Then
-            Label1.Text = "Preparing to Shutdown Forest-OS..."
+            Label1.Text = "Preparing to Shutdown Forest-OE..."
         End If
         If ProgressBar2.Value = 100 Then
             Label1.Text = "Exiting to Windows..."

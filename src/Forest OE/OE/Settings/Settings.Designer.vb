@@ -22,26 +22,28 @@ Partial Class Settings
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.userAccountLink_lnk = New System.Windows.Forms.LinkLabel()
         Me.UserGroups = New System.Windows.Forms.GroupBox()
         Me.devTools_grp = New System.Windows.Forms.GroupBox()
+        Me.testLink1_lnk = New System.Windows.Forms.LinkLabel()
         Me.UserGroups.SuspendLayout()
+        Me.devTools_grp.SuspendLayout()
         Me.SuspendLayout()
         '
-        'LinkLabel1
+        'userAccountLink_lnk
         '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(6, 16)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(116, 13)
-        Me.LinkLabel1.TabIndex = 0
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Create A New Account"
+        Me.userAccountLink_lnk.AutoSize = True
+        Me.userAccountLink_lnk.Location = New System.Drawing.Point(6, 16)
+        Me.userAccountLink_lnk.Name = "userAccountLink_lnk"
+        Me.userAccountLink_lnk.Size = New System.Drawing.Size(116, 13)
+        Me.userAccountLink_lnk.TabIndex = 0
+        Me.userAccountLink_lnk.TabStop = True
+        Me.userAccountLink_lnk.Text = "Create A New Account"
         '
         'UserGroups
         '
         Me.UserGroups.BackColor = System.Drawing.Color.Transparent
-        Me.UserGroups.Controls.Add(Me.LinkLabel1)
+        Me.UserGroups.Controls.Add(Me.userAccountLink_lnk)
         Me.UserGroups.Location = New System.Drawing.Point(12, 12)
         Me.UserGroups.Name = "UserGroups"
         Me.UserGroups.Size = New System.Drawing.Size(128, 100)
@@ -52,12 +54,23 @@ Partial Class Settings
         'devTools_grp
         '
         Me.devTools_grp.BackColor = System.Drawing.Color.Transparent
+        Me.devTools_grp.Controls.Add(Me.testLink1_lnk)
         Me.devTools_grp.Location = New System.Drawing.Point(21, 344)
         Me.devTools_grp.Name = "devTools_grp"
         Me.devTools_grp.Size = New System.Drawing.Size(751, 205)
         Me.devTools_grp.TabIndex = 0
         Me.devTools_grp.TabStop = False
         Me.devTools_grp.Text = "Developer Tools"
+        '
+        'testLink1_lnk
+        '
+        Me.testLink1_lnk.AutoSize = True
+        Me.testLink1_lnk.Location = New System.Drawing.Point(6, 16)
+        Me.testLink1_lnk.Name = "testLink1_lnk"
+        Me.testLink1_lnk.Size = New System.Drawing.Size(58, 13)
+        Me.testLink1_lnk.TabIndex = 0
+        Me.testLink1_lnk.TabStop = True
+        Me.testLink1_lnk.Text = "Test Crash"
         '
         'Settings
         '
@@ -75,11 +88,14 @@ Partial Class Settings
         Me.TopMost = True
         Me.UserGroups.ResumeLayout(False)
         Me.UserGroups.PerformLayout()
+        Me.devTools_grp.ResumeLayout(False)
+        Me.devTools_grp.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents userAccountLink_lnk As LinkLabel
     Friend WithEvents UserGroups As GroupBox
     Friend WithEvents devTools_grp As GroupBox
+    Friend WithEvents testLink1_lnk As LinkLabel
 End Class

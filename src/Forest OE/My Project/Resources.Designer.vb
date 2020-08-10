@@ -63,16 +63,6 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property active_state_40px() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("active_state_40px", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property add_40px() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("add_40px", resourceCulture)
@@ -441,6 +431,46 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        '''</summary>
+        Friend ReadOnly Property Forest_OE_Icon() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Forest_OE_Icon", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Forest_OE_Logo() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Forest_OE_Logo", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Forest_OE_Logo_NoText() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Forest_OE_Logo_NoText", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        '''</summary>
+        Friend ReadOnly Property Forest_OE_Logo_NoText1() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Forest_OE_Logo_NoText1", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
         Friend ReadOnly Property Forest_OS_Critical_Stop() As System.IO.UnmanagedMemoryStream
@@ -464,46 +494,6 @@ Namespace My.Resources
         Friend ReadOnly Property Forest_OS_Login() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("Forest_OS_Login", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        '''</summary>
-        Friend ReadOnly Property Forest_OS_Logo() As System.Drawing.Icon
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Forest_OS_Logo", resourceCulture)
-                Return CType(obj,System.Drawing.Icon)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        '''</summary>
-        Friend ReadOnly Property Forest_OS_Logo_NoText() As System.Drawing.Icon
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Forest_OS_Logo_NoText", resourceCulture)
-                Return CType(obj,System.Drawing.Icon)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property Forest_OS_Logo_NoText1() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Forest_OS_Logo_NoText1", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property Forest_OS_Logo1() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Forest_OS_Logo1", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
         

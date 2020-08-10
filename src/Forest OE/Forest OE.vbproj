@@ -49,7 +49,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\Forest-OS_Logo_NoText.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\Forest_OE_Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
@@ -123,24 +123,6 @@
       <DependentUpon>DeleteAccount.vb</DependentUpon>
     </Compile>
     <Compile Include="OE\DeleteAccount\DeleteAccount.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OE\Login\First Time Setup\Setup_Page2.Designer.vb">
-      <DependentUpon>Setup_Page2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OE\Login\First Time Setup\Setup_Page2.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OE\Login\First Time Setup\Setup_Page1.Designer.vb">
-      <DependentUpon>Setup_Page1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OE\Login\First Time Setup\Setup_Page1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OE\Login\First Time Setup\Setup_Page3.Designer.vb">
-      <DependentUpon>Setup_Page3.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OE\Login\First Time Setup\Setup_Page3.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OE\Login\Login.Designer.vb">
@@ -246,21 +228,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="OE\DeleteAccount\DeleteAccount.resx">
       <DependentUpon>DeleteAccount.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OE\Login\First Time Setup\Setup_Page2.resx">
-      <DependentUpon>Setup_Page2.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OE\Login\First Time Setup\Setup_Page1.resx">
-      <DependentUpon>Setup_Page1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OE\Login\First Time Setup\Setup_Page3.resx">
-      <DependentUpon>Setup_Page3.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OE\Login\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -324,18 +297,6 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Forest-OS_Logo.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Forest-OS_Logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Forest-OS_Logo_NoText.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Forest-OS_Logo_NoText.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Forest-OE-Console\Forest-OE-Console.vbproj">
@@ -773,6 +734,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\settingsBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forest-OE_Logo_NoText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forest_OE_Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forest-OE_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forest-OE_Logo_NoText.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

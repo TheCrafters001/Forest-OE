@@ -29,7 +29,7 @@ Partial Class Background
         'PictureBox1
         '
         Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.Image = Global.Forest_OE.My.Resources.Resources.Forest_OS_Logo1
+        Me.PictureBox1.Image = Global.Forest_OE.My.Resources.Resources.Forest_OE_Logo
         Me.PictureBox1.Location = New System.Drawing.Point(588, 447)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(200, 141)

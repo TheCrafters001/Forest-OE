@@ -24,27 +24,17 @@ Partial Class ExitToWindows
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.ProgressBar2 = New System.Windows.Forms.ProgressBar()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'ProgressBar2
         '
-        Me.ProgressBar2.Location = New System.Drawing.Point(12, 125)
+        Me.ProgressBar2.Location = New System.Drawing.Point(12, 154)
         Me.ProgressBar2.Name = "ProgressBar2"
         Me.ProgressBar2.Size = New System.Drawing.Size(309, 23)
         Me.ProgressBar2.TabIndex = 11
         Me.ProgressBar2.Visible = False
-        '
-        'ProgressBar1
-        '
-        Me.ProgressBar1.Location = New System.Drawing.Point(12, 154)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(309, 23)
-        Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee
-        Me.ProgressBar1.TabIndex = 10
-        Me.ProgressBar1.Visible = False
         '
         'Label1
         '
@@ -67,7 +57,6 @@ Partial Class ExitToWindows
         Me.ClientSize = New System.Drawing.Size(333, 189)
         Me.ControlBox = False
         Me.Controls.Add(Me.ProgressBar2)
-        Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
@@ -81,7 +70,6 @@ Partial Class ExitToWindows
     End Sub
 
     Friend WithEvents ProgressBar2 As ProgressBar
-    Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Label1 As Label
     Friend WithEvents Timer1 As Timer
 End Class

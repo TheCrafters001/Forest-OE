@@ -32,22 +32,26 @@ Partial Class ShutdownDialog
         '
         'options_grp
         '
+        Me.options_grp.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.options_grp.Controls.Add(Me.options_cmb)
         Me.options_grp.Controls.Add(Me.Label1)
         Me.options_grp.Location = New System.Drawing.Point(12, 12)
         Me.options_grp.Name = "options_grp"
-        Me.options_grp.Size = New System.Drawing.Size(414, 78)
+        Me.options_grp.Size = New System.Drawing.Size(307, 78)
         Me.options_grp.TabIndex = 0
         Me.options_grp.TabStop = False
         Me.options_grp.Text = "Select Shutdown Option"
         '
         'options_cmb
         '
+        Me.options_cmb.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.options_cmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.options_cmb.FormattingEnabled = True
         Me.options_cmb.Location = New System.Drawing.Point(9, 32)
         Me.options_cmb.Name = "options_cmb"
-        Me.options_cmb.Size = New System.Drawing.Size(399, 21)
+        Me.options_cmb.Size = New System.Drawing.Size(292, 21)
         Me.options_cmb.TabIndex = 1
         '
         'Label1
@@ -61,8 +65,9 @@ Partial Class ShutdownDialog
         '
         'shutdown_btn
         '
+        Me.shutdown_btn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.shutdown_btn.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.shutdown_btn.Location = New System.Drawing.Point(351, 100)
+        Me.shutdown_btn.Location = New System.Drawing.Point(244, 100)
         Me.shutdown_btn.Name = "shutdown_btn"
         Me.shutdown_btn.Size = New System.Drawing.Size(75, 23)
         Me.shutdown_btn.TabIndex = 1
@@ -85,7 +90,7 @@ Partial Class ShutdownDialog
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_btn
-        Me.ClientSize = New System.Drawing.Size(438, 135)
+        Me.ClientSize = New System.Drawing.Size(331, 135)
         Me.Controls.Add(Me.Cancel_btn)
         Me.Controls.Add(Me.shutdown_btn)
         Me.Controls.Add(Me.options_grp)

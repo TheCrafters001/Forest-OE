@@ -145,12 +145,6 @@
   <data name="icons8_settings_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-settings-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Forest_OS_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Forest-OS_Logo.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Forest_OS_Logo_NoText1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Forest-OS_Logo_NoText.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="one_way_transition_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\one_way_transition_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -343,9 +337,6 @@
   <data name="switch_on_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\switch_on_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="active_state_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\active_state_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="open_view_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\open_view_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -357,9 +348,6 @@
   </data>
   <data name="deviation_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\deviation_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Forest_OS_Logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Forest-OS_Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="initial_state_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\initial_state_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -417,9 +405,6 @@
   </data>
   <data name="downloads_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\downloads_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Forest_OS_Logo_NoText" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Forest-OS_Logo_NoText.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="close_pane_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close_pane_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -552,5 +537,17 @@
   </data>
   <data name="settingsBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settingsBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Forest_OE_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Forest_OE_Icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Forest_OE_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Forest-OE_Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Forest_OE_Logo_NoText" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Forest-OE_Logo_NoText.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Forest_OE_Logo_NoText1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Forest-OE_Logo_NoText.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

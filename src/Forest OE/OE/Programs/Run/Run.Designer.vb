@@ -68,7 +68,7 @@ Partial Class Run
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.Forest_OE.My.Resources.Resources.Forest_OS_Logo_NoText1
+        Me.PictureBox1.Image = Global.Forest_OE.My.Resources.Resources.Forest_OE_Logo_NoText
         Me.PictureBox1.Location = New System.Drawing.Point(-4, -3)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(77, 58)

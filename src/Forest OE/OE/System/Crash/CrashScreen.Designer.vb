@@ -87,7 +87,7 @@ Partial Class CrashScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Forest_OE.My.Resources.Resources.Forest_OS_Logo_NoText1
+        Me.BackgroundImage = Global.Forest_OE.My.Resources.Resources.Forest_OE_Logo_NoText
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(784, 561)
         Me.Controls.Add(Me.Label5)
