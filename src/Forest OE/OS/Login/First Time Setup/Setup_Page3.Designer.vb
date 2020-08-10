@@ -71,7 +71,7 @@ Partial Class Setup_Page3
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.Forest_OS.My.Resources.Resources.Setup_Large
+        Me.PictureBox1.Image = Global.Forest_OE.My.Resources.Resources.Setup_Large
         Me.PictureBox1.Location = New System.Drawing.Point(0, -2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(164, 314)

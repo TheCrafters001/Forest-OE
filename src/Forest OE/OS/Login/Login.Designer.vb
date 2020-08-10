@@ -126,7 +126,7 @@ Partial Class Login
         Me.AcceptButton = Me.OK
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Forest_OS.My.Resources.Resources.LoginWindowGradient
+        Me.BackgroundImage = Global.Forest_OE.My.Resources.Resources.LoginWindowGradient
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.CancelButton = Me.Cancel
         Me.ClientSize = New System.Drawing.Size(297, 290)

@@ -66,7 +66,7 @@ Partial Class Desktop
         'TestToolStripMenuItem
         '
         Me.TestToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProgramsToolStripMenuItem, Me.SettingsToolStripMenuItem, Me.AboutToolStripMenuItem, Me.ToolStripSeparator1, Me.ShutdownToolStripMenuItem})
-        Me.TestToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.menu_40px
+        Me.TestToolStripMenuItem.Image = Global.Forest_OE.My.Resources.Resources.menu_40px
         Me.TestToolStripMenuItem.Name = "TestToolStripMenuItem"
         Me.TestToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.TestToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
@@ -82,35 +82,35 @@ Partial Class Desktop
         'InternetToolStripMenuItem
         '
         Me.InternetToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChromeToolStripMenuItem, Me.FirefoxToolStripMenuItem, Me.InternetExplorerToolStripMenuItem, Me.MicrosoftEdgeToolStripMenuItem, Me.OperaToolStripMenuItem})
-        Me.InternetToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.internet_explorer_9_11_256x256
+        Me.InternetToolStripMenuItem.Image = Global.Forest_OE.My.Resources.Resources.internet_explorer_9_11_256x256
         Me.InternetToolStripMenuItem.Name = "InternetToolStripMenuItem"
         Me.InternetToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.InternetToolStripMenuItem.Text = "Internet"
         '
         'ChromeToolStripMenuItem
         '
-        Me.ChromeToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.chrome_256x256
+        Me.ChromeToolStripMenuItem.Image = Global.Forest_OE.My.Resources.Resources.chrome_256x256
         Me.ChromeToolStripMenuItem.Name = "ChromeToolStripMenuItem"
         Me.ChromeToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.ChromeToolStripMenuItem.Text = "Chrome"
         '
         'FirefoxToolStripMenuItem
         '
-        Me.FirefoxToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.firefox_256x256
+        Me.FirefoxToolStripMenuItem.Image = Global.Forest_OE.My.Resources.Resources.firefox_256x256
         Me.FirefoxToolStripMenuItem.Name = "FirefoxToolStripMenuItem"
         Me.FirefoxToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.FirefoxToolStripMenuItem.Text = "Firefox"
         '
         'InternetExplorerToolStripMenuItem
         '
-        Me.InternetExplorerToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.internet_explorer_9_11_256x256
+        Me.InternetExplorerToolStripMenuItem.Image = Global.Forest_OE.My.Resources.Resources.internet_explorer_9_11_256x256
         Me.InternetExplorerToolStripMenuItem.Name = "InternetExplorerToolStripMenuItem"
         Me.InternetExplorerToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.InternetExplorerToolStripMenuItem.Text = "Internet Explorer"
         '
         'MicrosoftEdgeToolStripMenuItem
         '
-        Me.MicrosoftEdgeToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.edge_256x256
+        Me.MicrosoftEdgeToolStripMenuItem.Image = Global.Forest_OE.My.Resources.Resources.edge_256x256
         Me.MicrosoftEdgeToolStripMenuItem.Name = "MicrosoftEdgeToolStripMenuItem"
         Me.MicrosoftEdgeToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.MicrosoftEdgeToolStripMenuItem.Text = "Microsoft Edge"
@@ -154,21 +154,21 @@ Partial Class Desktop
         '
         'FileExplorerToolStripMenuItem
         '
-        Me.FileExplorerToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.full_image_40px
+        Me.FileExplorerToolStripMenuItem.Image = Global.Forest_OE.My.Resources.Resources.full_image_40px
         Me.FileExplorerToolStripMenuItem.Name = "FileExplorerToolStripMenuItem"
         Me.FileExplorerToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.FileExplorerToolStripMenuItem.Text = "File Explorer"
         '
         'SettingsToolStripMenuItem
         '
-        Me.SettingsToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.icons8_settings_64
+        Me.SettingsToolStripMenuItem.Image = Global.Forest_OE.My.Resources.Resources.icons8_settings_64
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
         Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
         Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'AboutToolStripMenuItem
         '
-        Me.AboutToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.info_popup_40px
+        Me.AboutToolStripMenuItem.Image = Global.Forest_OE.My.Resources.Resources.info_popup_40px
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
         Me.AboutToolStripMenuItem.Text = "About"
@@ -180,7 +180,7 @@ Partial Class Desktop
         '
         'ShutdownToolStripMenuItem
         '
-        Me.ShutdownToolStripMenuItem.Image = Global.Forest_OS.My.Resources.Resources.close_window_40px
+        Me.ShutdownToolStripMenuItem.Image = Global.Forest_OE.My.Resources.Resources.close_window_40px
         Me.ShutdownToolStripMenuItem.Name = "ShutdownToolStripMenuItem"
         Me.ShutdownToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
         Me.ShutdownToolStripMenuItem.Text = "Shutdown..."
@@ -363,7 +363,7 @@ Partial Class Desktop
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkCyan
-        Me.BackgroundImage = Global.Forest_OS.My.Resources.Resources.Wallpaper
+        Me.BackgroundImage = Global.Forest_OE.My.Resources.Resources.Wallpaper
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(1100, 600)
         Me.ControlBox = False

@@ -41,7 +41,7 @@
         Dim type As String = Console.ReadLine()
         Console.WriteLine("")
         Try
-            ForestOSUtilities.UserShell.CreateUser(password.ToString, user.ToString, type.ToString)
+            ForestOEUtilities.UserShell.CreateUser(password.ToString, user.ToString, type.ToString)
         Catch ex As Exception
             Console.WriteLine("An error occured.")
             Console.WriteLine(ex)
@@ -134,7 +134,7 @@
 #End Region
 #Region "File Checker"
     Public Shared Sub chkusr()
-        ForestOSUtilities.CheckFiles.CheckForFolders()
+        ForestOEUtilities.CheckFiles.CheckForFolders()
     End Sub
 #End Region
 #Region "Misc"

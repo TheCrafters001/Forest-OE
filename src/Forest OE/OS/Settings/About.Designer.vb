@@ -33,7 +33,7 @@ Partial Class About
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.Forest_OS.My.Resources.Resources.Forest_OS_Logo1
+        Me.PictureBox1.Image = Global.Forest_OE.My.Resources.Resources.Forest_OS_Logo1
         Me.PictureBox1.Location = New System.Drawing.Point(-66, -16)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(245, 162)

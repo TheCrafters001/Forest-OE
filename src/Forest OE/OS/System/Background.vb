@@ -1,8 +1,8 @@
-﻿Imports ForestOSUtilities
+﻿Imports ForestOEUtilities
 
 Public Class Background
     Private Sub Background_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ForestOSUtilities.CheckFIles.CheckForFolders()
+        ForestOEUtilities.CheckFiles.CheckForFolders()
         ExplorerStatusChanger.KillExplorer()
         Login.Show()
     End Sub

@@ -1,4 +1,4 @@
-﻿Imports ForestOSUtilities
+﻿Imports ForestOEUtilities
 
 Public Class Shutdown
     Private Sub Shutdown_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -41,7 +41,7 @@ Public Class Shutdown
             Label1.Text = "Shutting Down..."
         End If
         If ProgressBar2.Value = 100 Then
-            ForestOSUtilities.ExplorerStatusChanger.Shutdown()
+            ForestOEUtilities.ExplorerStatusChanger.Shutdown()
             End
         End If
     End Sub

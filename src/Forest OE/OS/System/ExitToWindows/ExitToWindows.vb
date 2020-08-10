@@ -1,4 +1,4 @@
-﻿Imports ForestOSUtilities.ExplorerStatusChanger
+﻿Imports ForestOEUtilities.ExplorerStatusChanger
 Public Class ExitToWindows
     Private Sub ExitToWindows_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Close All Applications of Forest-OS

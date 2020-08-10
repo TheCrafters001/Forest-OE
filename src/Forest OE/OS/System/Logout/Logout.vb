@@ -40,7 +40,7 @@
         End If
         If ProgressBar2.Value = 100 Then
             Label1.Text = "Logging out..."
-            ForestOSUtilities.ExplorerStatusChanger.Logout()
+            ForestOEUtilities.ExplorerStatusChanger.Logout()
             End
         End If
     End Sub

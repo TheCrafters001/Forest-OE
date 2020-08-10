@@ -19,7 +19,7 @@
         End If
         If ProgressBar2.Value = 100 Then
             Label1.Text = "Restarting Computer..."
-            ForestOSUtilities.ExplorerStatusChanger.Restart()
+            ForestOEUtilities.ExplorerStatusChanger.Restart()
             End
         End If
     End Sub
