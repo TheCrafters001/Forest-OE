@@ -119,124 +119,124 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="OS\DeleteAccount\DeleteAccount.Designer.vb">
+    <Compile Include="OE\DeleteAccount\DeleteAccount.Designer.vb">
       <DependentUpon>DeleteAccount.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\DeleteAccount\DeleteAccount.vb">
+    <Compile Include="OE\DeleteAccount\DeleteAccount.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OS\Login\First Time Setup\Setup_Page2.Designer.vb">
+    <Compile Include="OE\Login\First Time Setup\Setup_Page2.Designer.vb">
       <DependentUpon>Setup_Page2.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\Login\First Time Setup\Setup_Page2.vb">
+    <Compile Include="OE\Login\First Time Setup\Setup_Page2.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OS\Login\First Time Setup\Setup_Page1.Designer.vb">
+    <Compile Include="OE\Login\First Time Setup\Setup_Page1.Designer.vb">
       <DependentUpon>Setup_Page1.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\Login\First Time Setup\Setup_Page1.vb">
+    <Compile Include="OE\Login\First Time Setup\Setup_Page1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OS\Login\First Time Setup\Setup_Page3.Designer.vb">
+    <Compile Include="OE\Login\First Time Setup\Setup_Page3.Designer.vb">
       <DependentUpon>Setup_Page3.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\Login\First Time Setup\Setup_Page3.vb">
+    <Compile Include="OE\Login\First Time Setup\Setup_Page3.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OS\Login\Login.Designer.vb">
+    <Compile Include="OE\Login\Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\Login\Login.vb">
+    <Compile Include="OE\Login\Login.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OS\Programs\Explorer\Explorer.Designer.vb">
+    <Compile Include="OE\Programs\Explorer\Explorer.Designer.vb">
       <DependentUpon>Explorer.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\Programs\Explorer\Explorer.vb">
+    <Compile Include="OE\Programs\Explorer\Explorer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OS\Programs\Run\Run.Designer.vb">
+    <Compile Include="OE\Programs\Run\Run.Designer.vb">
       <DependentUpon>Run.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\Programs\Run\Run.vb">
+    <Compile Include="OE\Programs\Run\Run.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OS\Register\CreateAccount.Designer.vb">
+    <Compile Include="OE\Register\CreateAccount.Designer.vb">
       <DependentUpon>CreateAccount.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\Register\CreateAccount.vb">
+    <Compile Include="OE\Register\CreateAccount.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OS\Settings\About.Designer.vb">
+    <Compile Include="OE\Settings\About.Designer.vb">
       <DependentUpon>About.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\Settings\About.vb">
+    <Compile Include="OE\Settings\About.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OS\Settings\Settings.Designer.vb">
+    <Compile Include="OE\Settings\Settings.Designer.vb">
       <DependentUpon>Settings.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\Settings\Settings.vb">
+    <Compile Include="OE\Settings\Settings.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OS\Settings\UAC\UAC.Designer.vb">
+    <Compile Include="OE\Settings\UAC\UAC.Designer.vb">
       <DependentUpon>UAC.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\Settings\UAC\UAC.vb">
+    <Compile Include="OE\Settings\UAC\UAC.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OS\System\Background.Designer.vb">
+    <Compile Include="OE\System\Background.Designer.vb">
       <DependentUpon>Background.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\System\Background.vb">
+    <Compile Include="OE\System\Background.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OS\System\Crash\CrashScreen.Designer.vb">
+    <Compile Include="OE\System\Crash\CrashScreen.Designer.vb">
       <DependentUpon>CrashScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\System\Crash\CrashScreen.vb">
+    <Compile Include="OE\System\Crash\CrashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OS\System\ExitToWindows\ExitToWindows.Designer.vb">
+    <Compile Include="OE\System\ExitToWindows\ExitToWindows.Designer.vb">
       <DependentUpon>ExitToWindows.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\System\ExitToWindows\ExitToWindows.vb">
+    <Compile Include="OE\System\ExitToWindows\ExitToWindows.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OS\System\Login_System\ServiceStarter.Designer.vb">
+    <Compile Include="OE\System\Login_System\ServiceStarter.Designer.vb">
       <DependentUpon>ServiceStarter.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\System\Login_System\ServiceStarter.vb">
+    <Compile Include="OE\System\Login_System\ServiceStarter.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OS\System\Logout\Logout.Designer.vb">
+    <Compile Include="OE\System\Logout\Logout.Designer.vb">
       <DependentUpon>Logout.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\System\Logout\Logout.vb">
+    <Compile Include="OE\System\Logout\Logout.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OS\System\Restart\Restart.Designer.vb">
+    <Compile Include="OE\System\Restart\Restart.Designer.vb">
       <DependentUpon>Restart.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\System\Restart\Restart.vb">
+    <Compile Include="OE\System\Restart\Restart.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OS\System\Shutdown\Shutdown.Designer.vb">
+    <Compile Include="OE\System\Shutdown\Shutdown.Designer.vb">
       <DependentUpon>Shutdown.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\System\Shutdown\Shutdown.vb">
+    <Compile Include="OE\System\Shutdown\Shutdown.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OS\Desktop\Desktop.Designer.vb">
+    <Compile Include="OE\Desktop\Desktop.Designer.vb">
       <DependentUpon>Desktop.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\Desktop\Desktop.vb">
+    <Compile Include="OE\Desktop\Desktop.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OS\System\Shutdown\ShutdownDialog.Designer.vb">
+    <Compile Include="OE\System\Shutdown\ShutdownDialog.Designer.vb">
       <DependentUpon>ShutdownDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="OS\System\Shutdown\ShutdownDialog.vb">
+    <Compile Include="OE\System\Shutdown\ShutdownDialog.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -250,64 +250,64 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\DeleteAccount\DeleteAccount.resx">
+    <EmbeddedResource Include="OE\DeleteAccount\DeleteAccount.resx">
       <DependentUpon>DeleteAccount.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Login\First Time Setup\Setup_Page2.resx">
+    <EmbeddedResource Include="OE\Login\First Time Setup\Setup_Page2.resx">
       <DependentUpon>Setup_Page2.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Login\First Time Setup\Setup_Page1.resx">
+    <EmbeddedResource Include="OE\Login\First Time Setup\Setup_Page1.resx">
       <DependentUpon>Setup_Page1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Login\First Time Setup\Setup_Page3.resx">
+    <EmbeddedResource Include="OE\Login\First Time Setup\Setup_Page3.resx">
       <DependentUpon>Setup_Page3.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Login\Login.resx">
+    <EmbeddedResource Include="OE\Login\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Programs\Explorer\Explorer.resx">
+    <EmbeddedResource Include="OE\Programs\Explorer\Explorer.resx">
       <DependentUpon>Explorer.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Programs\Run\Run.resx">
+    <EmbeddedResource Include="OE\Programs\Run\Run.resx">
       <DependentUpon>Run.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Register\CreateAccount.resx">
+    <EmbeddedResource Include="OE\Register\CreateAccount.resx">
       <DependentUpon>CreateAccount.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Settings\About.resx">
+    <EmbeddedResource Include="OE\Settings\About.resx">
       <DependentUpon>About.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Settings\Settings.resx">
+    <EmbeddedResource Include="OE\Settings\Settings.resx">
       <DependentUpon>Settings.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Settings\UAC\UAC.resx">
+    <EmbeddedResource Include="OE\Settings\UAC\UAC.resx">
       <DependentUpon>UAC.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\System\Background.resx">
+    <EmbeddedResource Include="OE\System\Background.resx">
       <DependentUpon>Background.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\System\Crash\CrashScreen.resx">
+    <EmbeddedResource Include="OE\System\Crash\CrashScreen.resx">
       <DependentUpon>CrashScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\System\ExitToWindows\ExitToWindows.resx">
+    <EmbeddedResource Include="OE\System\ExitToWindows\ExitToWindows.resx">
       <DependentUpon>ExitToWindows.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\System\Login_System\ServiceStarter.resx">
+    <EmbeddedResource Include="OE\System\Login_System\ServiceStarter.resx">
       <DependentUpon>ServiceStarter.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\System\Logout\Logout.resx">
+    <EmbeddedResource Include="OE\System\Logout\Logout.resx">
       <DependentUpon>Logout.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\System\Restart\Restart.resx">
+    <EmbeddedResource Include="OE\System\Restart\Restart.resx">
       <DependentUpon>Restart.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\System\Shutdown\Shutdown.resx">
+    <EmbeddedResource Include="OE\System\Shutdown\Shutdown.resx">
       <DependentUpon>Shutdown.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Desktop\Desktop.resx">
+    <EmbeddedResource Include="OE\Desktop\Desktop.resx">
       <DependentUpon>Desktop.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\System\Shutdown\ShutdownDialog.resx">
+    <EmbeddedResource Include="OE\System\Shutdown\ShutdownDialog.resx">
       <DependentUpon>ShutdownDialog.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

@@ -1,12 +1,12 @@
 ﻿Public Class ConsoleUtil
     Public Shared Sub StartupText()
-        Console.Title = "Forest-OS Console"
+        Console.Title = "Forest-OE Console"
         Console.WriteLine("=====================================")
-        Console.WriteLine("= Forest-OS Console                 =")
+        Console.WriteLine("= Forest-OE Console                 =")
         Console.WriteLine("= Base code by TheCrafters001       =")
         Console.WriteLine("= Copyright (C) TheCrafters001 2020 =")
         Console.WriteLine("=====================================")
-        Console.WriteLine("Forest-OS-Console Copyright (C) 2020 TheCrafters001")
+        Console.WriteLine("Forest-OE Console Copyright (C) 2020 TheCrafters001")
         Console.WriteLine("This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.")
         Console.WriteLine("This is free software, and you are welcome to redistribute it")
         Console.WriteLine("under certain conditions; type `show c' for details.")
@@ -64,7 +64,7 @@
         Console.WriteLine("title ----- changes title of console")
         Console.WriteLine("clear ----- clears console")
         Console.WriteLine("cmd ------- opens Windows command prompt")
-        Console.WriteLine("explorer -- opens Windows File Explorer, may break Forest-OS")
+        Console.WriteLine("explorer -- opens Windows File Explorer, may break Forest-OE")
         Console.WriteLine("license --- show the license")
         Console.WriteLine("show w ---- shows warranty info")
         Console.WriteLine("show c ---- shows redistribution info")
@@ -79,7 +79,7 @@
         '
     End Sub
     Public Shared Sub ShowNoArg()
-        Console.WriteLine("Forest-OS-Console Copyright (C) 2020 TheCrafters001")
+        Console.WriteLine("Forest-OE Console Copyright (C) 2020 TheCrafters001")
         Console.WriteLine("This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.")
         Console.WriteLine("This is free software, and you are welcome to redistribute it")
         Console.WriteLine("under certain conditions; type `show c' for details.")
@@ -111,7 +111,7 @@
     End Sub
 
     Public Shared Sub License()
-        Console.WriteLine("A progam to help make the Windows Experince better.")
+        Console.WriteLine("A Program to help make the Windows experience better.")
         Console.WriteLine("Copyright (C) 2020 TheCrafters001")
         Console.WriteLine("")
         Console.WriteLine("This program is free software: you can redistribute it and/or modify")
@@ -146,7 +146,7 @@
         prompt = Console.ReadLine()
         title = prompt
         If title = "" Then
-            title = "Forest-OS Console"
+            title = "Forest-OE Console"
         End If
         Console.Title = title
     End Sub
@@ -156,7 +156,7 @@
     End Sub
     Public Shared Sub WinExplorer()
         Console.WriteLine("Opening Windows File Explorer....")
-        Console.WriteLine("This May Break Forest-OS")
+        Console.WriteLine("This May Break Forest-OE")
         Process.Start("explorer.exe")
     End Sub
     Public Shared Sub WinCMD()
