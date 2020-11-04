@@ -43,8 +43,7 @@ Public Class Login
                         Dim password_decrypt As String = wrapper.DecryptData(cipherText)
                         If password_decrypt = PasswordTextBox.Text Then
                             ' Gather settings
-                            'Dim Theme As String = System.IO.File.ReadAllLines(Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Forest-OE\User\" & UserType.Text & "\" & UsernameTextBox.Text & "\settings.dll")(1)
-                            'My.Settings.Theme = Theme
+                            My.Settings.Theme = Theme_cmb.Text
                             My.Settings.Username = UsernameTextBox.Text
                             My.Settings.Usertype = UserType.Text
                             ServiceStarter.Show()
@@ -81,12 +80,18 @@ Public Class Login
     End Sub
 
     Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles Cancel.Click
+        Debug.WriteLine("Starting Exit Process")
         ExplorerStatusChanger.StartExplorer()
         End
     End Sub
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Debug.WriteLine("Login Launched")
         UserType.SelectedIndex = 1
+        Debug.WriteLine("Set UserType to Standard (1)")
+        Theme_cmb.SelectedIndex = 0
+        Debug.WriteLine("Set Theme to Default (0)")
         My.Computer.Audio.Play(My.Resources.Forest_OS_Startup, AudioPlayMode.Background)
+        Debug.WriteLine("Login Sound Played")
     End Sub
 End Class

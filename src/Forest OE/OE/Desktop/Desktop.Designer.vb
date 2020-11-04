@@ -27,10 +27,11 @@ Partial Class Desktop
         Me.Time_lbl = New System.Windows.Forms.Label()
         Me.quickLaunch_btn = New System.Windows.Forms.Button()
         Me.quickLaunch_grp = New System.Windows.Forms.GroupBox()
+        Me.QuickLaunchList = New System.Windows.Forms.ListBox()
         Me.desktopMenu_menustrip = New System.Windows.Forms.MenuStrip()
         Me.MenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RunToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.shutdownMenuItem_Desktop = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RunToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.quickLaunch_grp.SuspendLayout()
         Me.desktopMenu_menustrip.SuspendLayout()
         Me.SuspendLayout()
@@ -64,6 +65,7 @@ Partial Class Desktop
         Me.quickLaunch_grp.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.quickLaunch_grp.BackColor = System.Drawing.Color.Transparent
+        Me.quickLaunch_grp.Controls.Add(Me.QuickLaunchList)
         Me.quickLaunch_grp.Controls.Add(Me.quickLaunch_btn)
         Me.quickLaunch_grp.Location = New System.Drawing.Point(12, 12)
         Me.quickLaunch_grp.Name = "quickLaunch_grp"
@@ -71,6 +73,15 @@ Partial Class Desktop
         Me.quickLaunch_grp.TabIndex = 4
         Me.quickLaunch_grp.TabStop = False
         Me.quickLaunch_grp.Text = "Quick Launch"
+        '
+        'QuickLaunchList
+        '
+        Me.QuickLaunchList.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.QuickLaunchList.FormattingEnabled = True
+        Me.QuickLaunchList.Location = New System.Drawing.Point(6, 19)
+        Me.QuickLaunchList.Name = "QuickLaunchList"
+        Me.QuickLaunchList.Size = New System.Drawing.Size(145, 511)
+        Me.QuickLaunchList.TabIndex = 6
         '
         'desktopMenu_menustrip
         '
@@ -90,18 +101,18 @@ Partial Class Desktop
         Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
         Me.MenuToolStripMenuItem.Text = "Menu"
         '
+        'shutdownMenuItem_Desktop
+        '
+        Me.shutdownMenuItem_Desktop.Image = Global.Forest_OE.My.Resources.Resources.close_pane_40px
+        Me.shutdownMenuItem_Desktop.Name = "shutdownMenuItem_Desktop"
+        Me.shutdownMenuItem_Desktop.Size = New System.Drawing.Size(137, 22)
+        Me.shutdownMenuItem_Desktop.Text = "Shutdown..."
+        '
         'RunToolStripMenuItem
         '
         Me.RunToolStripMenuItem.Name = "RunToolStripMenuItem"
         Me.RunToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
         Me.RunToolStripMenuItem.Text = "Run"
-        '
-        'shutdownMenuItem_Desktop
-        '
-        Me.shutdownMenuItem_Desktop.Image = Global.Forest_OE.My.Resources.Resources.close_pane_40px
-        Me.shutdownMenuItem_Desktop.Name = "shutdownMenuItem_Desktop"
-        Me.shutdownMenuItem_Desktop.Size = New System.Drawing.Size(180, 22)
-        Me.shutdownMenuItem_Desktop.Text = "Shutdown..."
         '
         'Desktop
         '
@@ -153,4 +164,5 @@ Partial Class Desktop
     Friend WithEvents MenuToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RunToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents shutdownMenuItem_Desktop As ToolStripMenuItem
+    Friend WithEvents QuickLaunchList As ListBox
 End Class

@@ -38,6 +38,8 @@ Partial Class Login
         Me.Create = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.UserType = New System.Windows.Forms.ComboBox()
+        Me.Theme_cmb = New System.Windows.Forms.ComboBox()
+        Me.Theme_lbl = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'UsernameLabel
@@ -121,6 +123,26 @@ Partial Class Login
         Me.UserType.Size = New System.Drawing.Size(273, 21)
         Me.UserType.TabIndex = 8
         '
+        'Theme_cmb
+        '
+        Me.Theme_cmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Theme_cmb.FormattingEnabled = True
+        Me.Theme_cmb.Items.AddRange(New Object() {"Default", "Light", "Dark", "System Beta"})
+        Me.Theme_cmb.Location = New System.Drawing.Point(12, 163)
+        Me.Theme_cmb.Name = "Theme_cmb"
+        Me.Theme_cmb.Size = New System.Drawing.Size(273, 21)
+        Me.Theme_cmb.TabIndex = 10
+        '
+        'Theme_lbl
+        '
+        Me.Theme_lbl.AutoSize = True
+        Me.Theme_lbl.BackColor = System.Drawing.Color.Transparent
+        Me.Theme_lbl.Location = New System.Drawing.Point(12, 147)
+        Me.Theme_lbl.Name = "Theme_lbl"
+        Me.Theme_lbl.Size = New System.Drawing.Size(134, 13)
+        Me.Theme_lbl.TabIndex = 9
+        Me.Theme_lbl.Text = "Theme (Not Working Yet)"
+        '
         'Login
         '
         Me.AcceptButton = Me.OK
@@ -130,6 +152,8 @@ Partial Class Login
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.CancelButton = Me.Cancel
         Me.ClientSize = New System.Drawing.Size(297, 290)
+        Me.Controls.Add(Me.Theme_cmb)
+        Me.Controls.Add(Me.Theme_lbl)
         Me.Controls.Add(Me.UserType)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Create)
@@ -156,4 +180,6 @@ Partial Class Login
     Friend WithEvents Create As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents UserType As ComboBox
+    Friend WithEvents Theme_cmb As ComboBox
+    Friend WithEvents Theme_lbl As Label
 End Class

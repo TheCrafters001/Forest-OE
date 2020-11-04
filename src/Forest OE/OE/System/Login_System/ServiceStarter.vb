@@ -7,10 +7,22 @@
         ProgressBar2.Increment(5)
         If ProgressBar2.Value = 5 Then
             Me.Text = "Logging in..."
-            Label1.Text = "Preparing to login..."
+            Label1.Text = "Processing Theme Selection..."
+            If My.Settings.Theme = "Default" Then
+                My.Settings.Theme = "System Beta"
+                ' Do nothing as System Beta is default
+            Else
+                If My.Settings.Theme = "Light" Then
+
+                ElseIf My.Settings.Theme = "Dark" Then
+
+                ElseIf My.Settings.Theme = "System Beta" Then
+
+                End If
+            End If
         End If
         If ProgressBar2.Value = 20 Then
-            Label1.Text = "Starting Desktop Services..."
+            Label1.Text = "Please Wait..."
         End If
         If ProgressBar2.Value = 25 Then
             Label1.Text = "Preparing Your Desktop..."

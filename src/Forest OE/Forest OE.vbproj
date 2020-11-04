@@ -185,6 +185,13 @@
     <Compile Include="OE\System\ExitToWindows\ExitToWindows.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="OE\System\Finders\BrowserFinder.vb" />
+    <Compile Include="OE\System\Finders\ProgramFinder.Designer.vb">
+      <DependentUpon>ProgramFinder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OE\System\Finders\ProgramFinder.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="OE\System\Login_System\ServiceStarter.Designer.vb">
       <DependentUpon>ServiceStarter.vb</DependentUpon>
     </Compile>
@@ -264,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OE\System\ExitToWindows\ExitToWindows.resx">
       <DependentUpon>ExitToWindows.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OE\System\Finders\ProgramFinder.resx">
+      <DependentUpon>ProgramFinder.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OE\System\Login_System\ServiceStarter.resx">
       <DependentUpon>ServiceStarter.vb</DependentUpon>
